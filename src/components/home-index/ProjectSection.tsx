@@ -60,14 +60,25 @@ const NewsProjectCard: React.FC<{
     hoverImage: string;
     type: 'news' | 'project';
     isRTL: boolean;
-}> = ({ title, description, image, hoverImage, type, isRTL }) => {
+    path: string;
+    isMobileView?: boolean;
+}> = ({ title, description, image, hoverImage, type, isRTL, path, isMobileView = false }) => {
     const [isHovered, setIsHovered] = useState(false);
+    const [showSecondImage, setShowSecondImage] = useState(false);
+
+    const handleCardClick = (e: React.MouseEvent) => {
+        if (isMobileView) {
+            e.preventDefault();
+            setShowSecondImage(!showSecondImage);
+        }
+    };
 
     return (
         <div
             className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-[400px] md:h-full mt-4"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            onClick={handleCardClick}
         >
             {/* Image Container */}
             <div className="relative overflow-hidden h-56 md:h-60">
@@ -75,7 +86,7 @@ const NewsProjectCard: React.FC<{
                 <img
                     src={image}
                     alt={title}
-                    className={`w-full h-full object-cover transition-all duration-700 ${isHovered ? 'opacity-0 scale-110' : 'opacity-100 scale-100'
+                    className={`w-full h-full object-cover transition-all duration-700 ${(isMobileView ? showSecondImage : isHovered) ? 'opacity-0 scale-110' : 'opacity-100 scale-100'
                         }`}
                 />
 
@@ -83,7 +94,7 @@ const NewsProjectCard: React.FC<{
                 <img
                     src={hoverImage}
                     alt={title}
-                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${isHovered ? 'opacity-100 scale-110' : 'opacity-0 scale-100'
+                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${(isMobileView ? showSecondImage : isHovered) ? 'opacity-100 scale-110' : 'opacity-0 scale-100'
                         }`}
                 />
 
@@ -113,31 +124,39 @@ const NewsProjectCard: React.FC<{
                     {description}
                 </p>
 
-                {/* زر بسيط صغير واحترافي */}
-                <button
-                    className={`
-                        inline-flex items-center gap-1.5
-                        px-4 py-2
-                        bg-gold/10 group-hover:bg-gold
-                        text-gold group-hover:text-white
-                        text-xs font-medium
-                        rounded-lg
-                        transition-all duration-300
-                        border border-gold/20 group-hover:border-gold
-                        ${isRTL ? 'flex-row-reverse font-arabic self-end' : 'self-start'}
-                    `}
+                {/* زر محسّن بأنيميشن أفضل */}
+                <Link
+                    to={path}
+                    className={`inline-flex ${isRTL ? 'self-end' : 'self-start'}`}
+                    onClick={(e) => isMobileView && e.stopPropagation()}
                 >
-                    <span>
-                        {type === 'news'
-                            ? (isRTL ? 'قراءة' : 'Read')
-                            : (isRTL ? 'عرض' : 'View')
-                        }
-                    </span>
-                    <ArrowRight
-                        size={14}
-                        className={`transition-transform duration-300 group-hover:translate-x-0.5 ${isRTL ? 'rotate-180' : ''}`}
-                    />
-                </button>
+                    <button
+                        className={`
+                            inline-flex items-center gap-2
+                            px-5 py-2.5
+                            bg-gold/10 hover:bg-gold
+                            text-gold hover:text-white
+                            text-sm font-semibold
+                            rounded-xl
+                            transition-all duration-300
+                            border border-gold/30 hover:border-gold
+                            hover:shadow-lg hover:shadow-gold/20
+                            transform hover:scale-105 active:scale-95
+                            ${isRTL ? 'flex-row-reverse font-arabic' : ''}
+                        `}
+                    >
+                        <span>
+                            {type === 'news'
+                                ? (isRTL ? 'قراءة المزيد' : 'Read More')
+                                : (isRTL ? 'عرض المشروع' : 'View Project')
+                            }
+                        </span>
+                        <ArrowRight
+                            size={16}
+                            className={`transition-transform duration-300 group-hover:translate-x-1 ${isRTL ? 'rotate-180 group-hover:-translate-x-1' : ''}`}
+                        />
+                    </button>
+                </Link>
             </div>
 
             {/* Subtle Border Effect */}
@@ -228,16 +247,16 @@ const LatestNewsProjects: React.FC = () => {
                             >
                                 {latestItems.map((item) => (
                                     <div key={item.id} className="w-full flex-shrink-0 sm:p-0">
-                                        <Link to={item.path} className="block h-full">
-                                            <NewsProjectCard
-                                                title={language === 'ar' ? item.titleAr : item.titleEn}
-                                                description={language === 'ar' ? item.descriptionAr : item.descriptionEn}
-                                                image={item.image}
-                                                hoverImage={item.hoverImage}
-                                                type={item.type}
-                                                isRTL={isRTL}
-                                            />
-                                        </Link>
+                                        <NewsProjectCard
+                                            title={language === 'ar' ? item.titleAr : item.titleEn}
+                                            description={language === 'ar' ? item.descriptionAr : item.descriptionEn}
+                                            image={item.image}
+                                            hoverImage={item.hoverImage}
+                                            type={item.type}
+                                            isRTL={isRTL}
+                                            path={item.path}
+                                            isMobileView={true}
+                                        />
                                     </div>
                                 ))}
                             </div>
@@ -298,6 +317,8 @@ const LatestNewsProjects: React.FC = () => {
                                         hoverImage={item.hoverImage}
                                         type={item.type}
                                         isRTL={isRTL}
+                                        path={item.path}
+                                        isMobileView={false}
                                     />
                                 </Link>
                             </div>

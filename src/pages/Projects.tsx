@@ -258,8 +258,8 @@ const Projects = () => {
                         <video
                             key={selectedVideo} // مفتاح فريد لكل فيديو
                             autoPlay
+                            muted
                             playsInline
-                            // إضافة muted لضمان التشغيل التلقائي في جميع المتصفحات
                             onEnded={handleVideoEnd}
                             className="max-h-screen shadow-2xl rounded-lg"
                             style={{ maxWidth: '90vw' }}
@@ -268,20 +268,37 @@ const Projects = () => {
                         </video>
                     </motion.div>
 
-                    {/* Skip Button */}
+                    {/* Control Buttons */}
                     {showSkip && (
-                        <motion.button
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.4 }}
-                            onClick={handleSkip}
-                            className={`fixed bottom-8 ${isRTL ? 'left-8' : 'right-8'} z-20 bg-white/90 hover:bg-white text-charcoal px-6 py-3 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 font-semibold flex items-center gap-2`}
-                        >
-                            {isRTL ? 'تخطي' : 'Skip'}
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
-                            </svg>
-                        </motion.button>
+                        <>
+                            {/* Close Button (X) */}
+                            <motion.button
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ duration: 0.4 }}
+                                onClick={handleSkip}
+                                className={`fixed top-8 ${isRTL ? 'left-8' : 'right-8'} z-20 bg-gold/90 hover:bg-gold text-white p-3 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:rotate-90 group`}
+                                aria-label={isRTL ? 'إغلاق' : 'Close'}
+                            >
+                                <svg className="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </motion.button>
+
+                            {/* Skip Button */}
+                            <motion.button
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay: 0.1 }}
+                                onClick={handleSkip}
+                                className={`fixed bottom-8 ${isRTL ? 'left-8' : 'right-8'} z-20 bg-white/90 hover:bg-white text-charcoal px-6 py-3 rounded-full shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-105 font-semibold flex items-center gap-2 group`}
+                            >
+                                {isRTL ? 'تخطي' : 'Skip'}
+                                <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+                                </svg>
+                            </motion.button>
+                        </>
                     )}
                 </motion.div>
             )}

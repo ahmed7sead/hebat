@@ -46,6 +46,15 @@ const Navbar: React.FC = () => {
     { name: isRTL ? 'تواصل معنا' : 'Contact Us', path: '/contact', icon: Phone },
   ];
 
+  // Mobile-specific order: News, Interior Design, Products, About Us, Contact (Home is added separately above)
+  const mobileNavItems = [
+    { name: isRTL ? 'أخبارنا' : 'News', path: '/News', icon: Newspaper, isSemiBold: true },
+    { name: isRTL ? 'التصميم الداخلي' : 'Interior Design', path: '/testimonials', icon: MessageSquare },
+    { name: isRTL ? 'منتجات مصنعنا' : 'Products', path: '/gallery', icon: Image },
+    { name: isRTL ? 'من نحن' : 'About Us', path: '/about', icon: Users },
+    { name: isRTL ? 'تواصل معنا' : 'Contact Us', path: '/contact', icon: Phone },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -187,10 +196,11 @@ const Navbar: React.FC = () => {
             </SheetTrigger>
             <SheetContent
               side={isRTL ? "right" : "left"}
-              className={`p-0 w-80 ${isRTL ? 'text-right' : 'text-left'}`}
+              className={`p-0 w-80 ${isRTL ? 'text-right' : 'text-left'} flex flex-col h-full`}
               closeButton={false}
             >
-              <div className="flex items-center justify-between p-5 border-b bg-gradient-to-r from-gold/5 to-transparent">
+              {/* Header - Fixed */}
+              <div className="flex items-center justify-between p-5 border-b bg-gradient-to-r from-gold/5 to-transparent flex-shrink-0">
                 <div className="flex items-center gap-3">
                   <img
                     src="/Logo_and_identity/logo.png"
@@ -212,42 +222,38 @@ const Navbar: React.FC = () => {
                 </motion.button>
               </div>
 
-              <div className="py-6 px-5">
+              {/* Scrollable Content */}
+              <div className="flex-1 overflow-y-auto py-6 px-5">
                 <div className={`flex flex-col space-y-2 ${isRTL ? 'items-end' : 'items-start'}`}>
-                  {navItems.map((item, index) => {
-                    const IconComponent = item.icon;
-                    return (
-                      <motion.div
-                        key={item.path}
-                        initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1, duration: 0.3 }}
-                        className="w-full"
-                      >
-                        <Link
-                          to={item.path}
-                          className={`flex items-center gap-3 w-full px-5 py-3.5 rounded-lg transition-all duration-300 ${isRTL ? 'font-tajawal text-[15px]' : 'font-roboto text-[15px]'}
-                            ${location.pathname === item.path
-                              ? 'bg-gold text-white shadow-md hover:bg-gold/90 hover:shadow-lg'
-                              : 'text-charcoal hover:bg-gold/10 hover:text-gold hover:shadow-sm'
-                            }
-                            ${isRTL ? 'text-right flex-row-reverse' : 'text-left'}
-                          `}
-                          onClick={() => setSheetOpen(false)}
-                        >
-                          <IconComponent className={`h-5 w-5 ${location.pathname === item.path ? 'text-white' : 'text-gold'}`} />
-                          <span className={`${item.isBold ? 'font-bold' : 'font-semibold'}`}>{item.name}</span>
-                        </Link>
-                      </motion.div>
-                    );
-                  })}
+                  {/* Home - Always First */}
+                  <motion.div
+                    initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0, duration: 0.3 }}
+                    className="w-full"
+                  >
+                    <Link
+                      to="/"
+                      className={`flex items-center gap-3 w-full px-5 py-3.5 rounded-lg transition-all duration-300 ${isRTL ? 'font-tajawal text-[15px]' : 'font-roboto text-[15px]'}
+                        ${location.pathname === '/'
+                          ? 'bg-gold text-white shadow-md hover:bg-gold/90 hover:shadow-lg'
+                          : 'text-charcoal hover:bg-gold/10 hover:text-gold hover:shadow-sm'
+                        }
+                        ${isRTL ? 'text-right flex-row-reverse' : 'text-left'}
+                      `}
+                      onClick={() => setSheetOpen(false)}
+                    >
+                      <Home className={`h-5 w-5 ${location.pathname === '/' ? 'text-white' : 'text-gold'}`} />
+                      <span className="font-semibold">{isRTL ? 'الرئيسية' : 'Home'}</span>
+                    </Link>
+                  </motion.div>
 
-                  {/* Projects Dropdown - Mobile */}
+                  {/* Projects Dropdown - Second in Mobile */}
                   <motion.div
                     className="w-full"
                     initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: navItems.length * 0.1, duration: 0.3 }}
+                    transition={{ delay: 0.1, duration: 0.3 }}
                   >
                     <button
                       onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
@@ -285,11 +291,41 @@ const Navbar: React.FC = () => {
                       )}
                     </AnimatePresence>
                   </motion.div>
+
+                  {/* Rest of Mobile Nav Items in Custom Order */}
+                  {mobileNavItems.map((item, index) => {
+                    const IconComponent = item.icon;
+                    return (
+                      <motion.div
+                        key={item.path}
+                        initial={{ opacity: 0, x: isRTL ? 20 : -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: (index + 2) * 0.1, duration: 0.3 }}
+                        className="w-full"
+                      >
+                        <Link
+                          to={item.path}
+                          className={`flex items-center gap-3 w-full px-5 py-3.5 rounded-lg transition-all duration-300 ${isRTL ? 'font-tajawal text-[15px]' : 'font-roboto text-[15px]'}
+                            ${location.pathname === item.path
+                              ? 'bg-gold text-white shadow-md hover:bg-gold/90 hover:shadow-lg'
+                              : 'text-charcoal hover:bg-gold/10 hover:text-gold hover:shadow-sm'
+                            }
+                            ${isRTL ? 'text-right flex-row-reverse' : 'text-left'}
+                          `}
+                          onClick={() => setSheetOpen(false)}
+                        >
+                          <IconComponent className={`h-5 w-5 ${location.pathname === item.path ? 'text-white' : 'text-gold'}`} />
+                          <span className={`${item.isSemiBold ? 'font-semibold' : 'font-semibold'}`}>{item.name}</span>
+                        </Link>
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </div>
 
+              {/* Footer - Fixed */}
               <motion.div
-                className={`mt-auto p-5 border-t bg-gradient-to-r from-gold/5 to-transparent text-[15px] text-gray-500 ${isRTL ? 'text-right font-tajawal' : 'text-left font-roboto'}`}
+                className={`flex-shrink-0 p-5 border-t bg-gradient-to-r from-gold/5 to-transparent text-[15px] text-gray-500 ${isRTL ? 'text-right font-tajawal' : 'text-left font-roboto'}`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.3 }}

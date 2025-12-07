@@ -47,6 +47,10 @@ const PartnerSlider: React.FC = () => {
     {
       name: "NHC",
       image: "/Partner/nhc.png"
+    },
+    {
+      name: "Rixos Hotel",
+      image: "/Partner/460-4603218_rixos-hotels-logos-download-rixos-hotels-hd-png.png"
     }
   ];
 

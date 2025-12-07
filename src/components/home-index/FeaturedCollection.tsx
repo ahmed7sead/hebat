@@ -55,14 +55,25 @@ const EnhancedProductCard: React.FC<{
   image: string;
   hoverImage: string;
   isRTL: boolean;
-}> = ({ title, category, image, hoverImage, isRTL }) => {
+  path: string;
+  isMobileView?: boolean;
+}> = ({ title, category, image, hoverImage, isRTL, path, isMobileView = false }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [showSecondImage, setShowSecondImage] = useState(false);
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    if (isMobileView) {
+      e.preventDefault();
+      setShowSecondImage(!showSecondImage);
+    }
+  };
 
   return (
     <div
-      className="group relative bg-white rounded-2xl  overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-[420px] md:h-full "
+      className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-[420px] md:h-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleCardClick}
     >
       {/* Image Container */}
       <div className="relative overflow-hidden h-72 md:h-64">
@@ -70,7 +81,7 @@ const EnhancedProductCard: React.FC<{
         <img
           src={image}
           alt={title}
-          className={`w-full h-full object-cover transition-all duration-700 ${isHovered ? 'opacity-0 scale-110' : 'opacity-100 scale-100'
+          className={`w-full h-full object-cover transition-all duration-700 ${(isMobileView ? showSecondImage : isHovered) ? 'opacity-0 scale-110' : 'opacity-100 scale-100'
             }`}
         />
 
@@ -78,7 +89,7 @@ const EnhancedProductCard: React.FC<{
         <img
           src={hoverImage}
           alt={title}
-          className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${isHovered ? 'opacity-100 scale-110' : 'opacity-0 scale-100'
+          className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${(isMobileView ? showSecondImage : isHovered) ? 'opacity-100 scale-110' : 'opacity-0 scale-100'
             }`}
         />
 
@@ -86,7 +97,7 @@ const EnhancedProductCard: React.FC<{
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         {/* "View Project" Badge - Top Left Corner */}
-        <div className={`absolute top-3  ${isRTL ? 'right-3' : 'left-3'} opacity-0 transform -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500`}>
+        <div className={`absolute top-3 ${isRTL ? 'right-3' : 'left-3'} opacity-0 transform -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500`}>
           <div className={`flex items-center gap-1.5 bg-white/95 backdrop-blur-sm px-3.5 py-1.5 rounded-full shadow-lg ${isRTL ? 'flex-row-reverse' : ''}`}>
             <span className={`text-gold text-sm font-medium ${isRTL ? 'font-arabic' : ''}`}>
               {isRTL ? 'تصفح المشروع' : 'View Project'}
@@ -94,6 +105,22 @@ const EnhancedProductCard: React.FC<{
             <ArrowUpRight size={14} className="text-gold" />
           </div>
         </div>
+
+        {/* Mobile View Project Button - On Image */}
+        {isMobileView && (
+          <Link
+            to={path}
+            className={`absolute bottom-3 ${isRTL ? 'right-3' : 'left-3'} z-10`}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className={`flex items-center gap-1.5 bg-gold text-white px-4 py-2 rounded-full shadow-lg hover:bg-gold/90 transition-all duration-300 ${isRTL ? 'flex-row-reverse font-arabic' : ''}`}>
+              <span className="text-sm font-medium">
+                {isRTL ? 'مشاهدة المشروع' : 'View Project'}
+              </span>
+              <ArrowUpRight size={14} />
+            </button>
+          </Link>
+        )}
       </div>
 
       {/* Content */}
@@ -202,15 +229,15 @@ const FeaturedCollection: React.FC = () => {
               >
                 {collectionItems.map((item, index) => (
                   <div key={item.id} className="w-full flex-shrink-0 sm:p-0">
-                    <Link to={item.path} className="block h-full">
-                      <EnhancedProductCard
-                        title={language === 'ar' ? item.titleAr : item.titleEn}
-                        category={language === 'ar' ? item.categoryAr : item.categoryEn}
-                        image={item.image}
-                        hoverImage={item.hoverImage}
-                        isRTL={isRTL}
-                      />
-                    </Link>
+                    <EnhancedProductCard
+                      title={language === 'ar' ? item.titleAr : item.titleEn}
+                      category={language === 'ar' ? item.categoryAr : item.categoryEn}
+                      image={item.image}
+                      hoverImage={item.hoverImage}
+                      isRTL={isRTL}
+                      path={item.path}
+                      isMobileView={true}
+                    />
                   </div>
                 ))}
               </div>
@@ -270,6 +297,8 @@ const FeaturedCollection: React.FC = () => {
                     image={item.image}
                     hoverImage={item.hoverImage}
                     isRTL={isRTL}
+                    path={item.path}
+                    isMobileView={false}
                   />
                 </Link>
               </div>
