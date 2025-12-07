@@ -1,0 +1,13 @@
+/* Custom container */
+.container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Image container with hover zoom */
+.image-container {
+    @apply overflow-hidden rounded-lg;
+}
+
+.image-container img {
+    @apply w-full h-full object-cover transition-transform duration-500 hover:scale-105;
+}

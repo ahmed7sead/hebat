@@ -1,0 +1,23 @@
+/*  إعدادات الأساسيات من ألوان ومتغيرات */
+@import './base.css';
+
+/*  تنسيقات النصوص والعناوين */
+@import './typography.css';
+
+/*  التنسيقات المتجاوبة */
+@import './responsive.css';
+
+/*  المكونات القابلة لإعادة الاستخدام */
+@import './components.css';
+
+/*  التحريكات والأنيميشن */
+@import './animations.css';
+
+/*  تنسيقات النماذج والإدخالات */
+@import './form.css';
+
+/*  تنسيقات الأزرار */
+@import './buttons.css';
+
+/*  تصميم وتخطيطات الصفحات */
+@import './layouts.css';

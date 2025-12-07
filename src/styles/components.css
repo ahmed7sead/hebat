@@ -1,0 +1,186 @@
+@layer components {
+    .gold-gradient {
+        @apply bg-gradient-to-r from-gold-dark via-gold to-gold-light;
+    }
+
+    .elegant-shadow {
+        box-shadow: 0 4px 30px rgba(212, 175, 55, 0.1);
+    }
+
+    .section-title {
+        @apply text-heading-3 md:text-heading-2 font-bold mb-6 relative;
+    }
+
+    .section-title::after {
+        content: "";
+        @apply absolute bottom-0 left-0 h-1 w-16 gold-gradient;
+    }
+
+    [dir="rtl"] .section-title::after {
+        @apply right-0 left-auto;
+    }
+
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    .image-container {
+        @apply overflow-hidden rounded-lg;
+    }
+
+    .image-container img {
+        @apply w-full h-full object-cover transition-transform duration-500 hover:scale-105;
+    }
+
+    .content-card {
+        @apply soft-ui-card hover:shadow-soft-lg transition-all duration-300;
+    }
+
+    .hover-lift {
+        @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg;
+    }
+
+    .hover-glow {
+        @apply transition-all duration-300;
+    }
+
+    .hover-glow:hover {
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    }
+}
+
+
+/* تحسينات الظهور التدريجي للعناصر */
+/* apper element  */
+
+.fade-in-element {
+    @apply opacity-0 transition-all duration-1000 ease-out;
+}
+
+.fade-in-element.visible {
+    @apply opacity-100;
+}
+
+/* تأثيرات ظهور العناصر أثناء التمرير */
+/* scorlling fade reveal  */
+
+.reveal-on-scroll {
+    @apply opacity-0 transform transition-all duration-700;
+}
+
+.reveal-on-scroll.visible {
+    @apply opacity-100 translate-y-0;
+}
+
+.reveal-on-scroll-up {
+    @apply opacity-0 transform translate-y-10 transition-all duration-700 ease-out;
+}
+
+.reveal-on-scroll-up.visible {
+    @apply opacity-100 translate-y-0;
+}
+
+.reveal-on-scroll-right {
+    @apply opacity-0 transform -translate-x-10 transition-all duration-700 ease-out;
+}
+
+.reveal-on-scroll-right.visible {
+    @apply opacity-100 translate-x-0;
+}
+
+.reveal-on-scroll-left {
+    @apply opacity-0 transform translate-x-10 transition-all duration-700 ease-out;
+}
+
+.reveal-on-scroll-left.visible {
+    @apply opacity-100 translate-x-0;
+}
+
+
+/* Smoother animation with better easing */
+@keyframes reveal-smooth {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* News page specific animations */
+.news-section-enter {
+    opacity: 0;
+    transform: translateY(50px) scale(0.98);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.news-section-enter-active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Enhanced curved backgrounds for news sections */
+.curved-bg-1 {
+    clip-path: polygon(0% 0%, 90% 0%, 100% 85%, 10% 100%);
+}
+
+.curved-bg-2 {
+    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 85%);
+}
+
+.curved-bg-3 {
+    clip-path: polygon(0% 15%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+/* News page text animations */
+.news-text-reveal {
+    animation: textReveal 1s ease-out forwards;
+}
+
+@keyframes textReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(2px);
+    }
+
+    60% {
+        opacity: 0.8;
+        filter: blur(1px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Enhanced video hover effect */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    transition: all 0.5s ease;
+}
+
+.video-container:hover {
+    box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+    transform: translateY(-5px);
+}
+
+.video-play-button {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.video-container:hover .video-play-button {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+}

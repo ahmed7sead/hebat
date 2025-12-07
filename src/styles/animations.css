@@ -1,0 +1,527 @@
+/* Fade-in animation */
+@keyframes appear {
+    to {
+        @apply opacity-100 translate-y-0;
+    }
+}
+
+.appear-animate {
+    @apply opacity-0 translate-y-4;
+    animation: appear 0.8s forwards;
+    will-change: opacity, transform;
+}
+
+/* Smooth fade-in from bottom */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    70% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+    will-change: opacity, transform;
+}
+
+/* Slide-in from left */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease forwards;
+    will-change: opacity, transform;
+}
+
+/* Slide-in from right */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease forwards;
+    will-change: opacity, transform;
+}
+
+/* Fade-in from bottom with delay */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delay for animation effects */
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+
+/* Floating up and down effect */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Side slide animation for cards */
+@keyframes slideInFromSide {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in-side {
+    animation: slideInFromSide .8s ease-out forwards;
+}
+
+[dir="rtl"] .slide-in-side {
+    animation-name: slideInFromSideRTL;
+}
+
+@keyframes slideInFromSideRTL {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Staggered fade-in for multiple elements */
+.stagger-item {
+    opacity: 0;
+}
+
+.stagger-item.visible {
+    animation: staggerFadeIn .8s ease-out forwards;
+}
+
+@keyframes staggerFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(30px) translateY(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+
+/* Reveal effect animations */
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-reveal {
+    animation: reveal 0.8s ease-out forwards;
+}
+
+@keyframes reveal-smooth {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-reveal-smooth {
+    animation: reveal-smooth 1.2s ease-out forwards;
+}
+
+
+
+/*  في الصفحة الرئيسية فقط .. تحريكات مبنية على مراقب التمرير ومحسنة */
+/* Scrolling improvements */
+
+.scroll-animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-animate-fade-right {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate-fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-animate-fade-left {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate-fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-animate-scale {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* تأخيرات لتأثير التتابع */
+/* deley scroling */
+
+.scroll-delay-100 {
+    transition-delay: 100ms;
+}
+
+.scroll-delay-200 {
+    transition-delay: 200ms;
+}
+
+.scroll-delay-300 {
+    transition-delay: 300ms;
+}
+
+.scroll-delay-400 {
+    transition-delay: 400ms;
+}
+
+.scroll-delay-500 {
+    transition-delay: 500ms;
+}
+
+.scroll-animate-fade-up,
+.scroll-animate-fade-right,
+.scroll-animate-fade-left,
+.scroll-animate-scale {
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+
+/* Initial states */
+.scroll-animate-fade-up {
+    transform: translateY(50px);
+}
+
+.scroll-animate-fade-right {
+    transform: translateX(-50px);
+}
+
+.scroll-animate-fade-left {
+    transform: translateX(50px);
+}
+
+.scroll-animate-scale {
+    transform: scale(0.8);
+}
+
+/* Visible states when elements come into view */
+.scroll-animate-fade-up.visible,
+.scroll-animate-fade-right.visible,
+.scroll-animate-fade-left.visible,
+.scroll-animate-scale.visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+.animate-bounce {
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    53%,
+    80%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    40%,
+    43% {
+        transform: translate3d(0, -15px, 0);
+    }
+
+    70% {
+        transform: translate3d(0, -8px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, -3px, 0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes goldShimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.service-card {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.gold-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, theme('colors.gold.DEFAULT'), transparent);
+    transform: translateX(-100%) translateY(-50%);
+    transition: transform 0.6s ease;
+}
+
+.group:hover .gold-line::before {
+    transform: translateX(100%) translateY(-50%);
+}
+
+.enhanced-service-card {
+    background: linear-gradient(145deg, #ffffff 0%, #fafafa 100%);
+    border: 1px solid theme('colors.gold.DEFAULT / 10%');
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.enhanced-service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, theme('colors.gold.DEFAULT / 5%'), transparent);
+    transition: left 0.6s ease;
+}
+
+.enhanced-service-card:hover::before {
+    left: 100%;
+}
+
+.enhanced-service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px theme('colors.gold.DEFAULT / 15%');
+    border-color: theme('colors.gold.DEFAULT / 30%');
+}
+
+.floating-dots {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: linear-gradient(45deg, theme('colors.gold.DEFAULT'), theme('colors.gold.light'));
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.floating-dots:nth-child(1) {
+    top: 20%;
+    right: 15%;
+    animation-delay: 0.1s;
+}
+
+.floating-dots:nth-child(2) {
+    bottom: 30%;
+    left: 10%;
+    animation-delay: 0.3s;
+}
+
+.enhanced-service-card:hover .floating-dots {
+    opacity: 1;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.scroll-animate-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-animate-fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-animate-fade-right {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-animate-fade-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-animate-fade-left {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-animate-fade-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scroll-animate-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s ease-out;
+}
+
+.scroll-animate-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.language-transition {
+    transition: all 0.8s ease-in-out;
+}
+
+@keyframes custom-bounce {
+
+    0%,
+    100% {
+        transform: translateY(-7px);
+        /* مدى أقل */
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.animate-custom-bounce {
+    animation: custom-bounce 3.5s infinite;
+}

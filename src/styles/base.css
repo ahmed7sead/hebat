@@ -1,0 +1,70 @@
+@layer base {
+    :root {
+        --background: 50deg 33% 97%;
+        --foreground: 0 0% 13%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 13%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 13%;
+        --primary: 46 64% 52%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 0 0% 13%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 46 30% 95%;
+        --muted-foreground: 0 0% 40%;
+        --accent: 46 64% 52%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 90%;
+        --input: 0 0% 90%;
+        --ring: 46 64% 52%;
+        --radius: .6rem;
+    }
+
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground overflow-x-hidden font-roboto;
+    }
+
+    ::selection {
+        background-color: #cea621f1;
+        color: #fff;
+    }
+
+    img {
+        @apply transition-all duration-500 max-w-full;
+    }
+
+    img.lazy-load {
+        @apply opacity-0;
+    }
+
+    img.lazy-loaded {
+        @apply opacity-100;
+    }
+
+    [dir="rtl"] {
+        font-family: 'Cairo', sans-serif;
+        letter-spacing: -0.01em;
+        line-height: 1.6;
+    }
+
+    [dir="ltr"] {
+        font-family: 'Roboto', sans-serif;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+    }
+
+    [dir="rtl"] [lang="en"],
+    [dir="ltr"] [lang="ar"] {
+        display: none;
+    }
+
+    #root>main {
+        @apply transition-opacity duration-500;
+    }
+}

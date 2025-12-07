@@ -1,0 +1,62 @@
+/* General form element styles */
+input,
+textarea,
+select {
+    @apply w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent;
+}
+
+/* Custom contact form layout */
+.contact-form-custom .input-group {
+    position: relative;
+    margin-bottom: 30px;
+    width: 85%;
+    max-width: 410px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border: none;
+    transition: all 0.35s ease;
+}
+
+.contact-form-custom .main-input {
+    width: 100%;
+    padding: 16px 20px;
+    display: block;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #232321;
+    font-size: 1.08rem;
+    letter-spacing: 0.5px;
+    transition: border 0.35s, box-shadow 0.20s;
+    outline: none;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.05),
+        inset -5px -5px 10px rgba(255, 255, 255, 0.5);
+}
+
+.contact-form-custom .main-input:focus {
+    border: 2px solid #D4AF37;
+    background-color: #F5F5F0;
+}
+
+.contact-form-custom input::placeholder,
+.contact-form-custom textarea::placeholder {
+    color: transparent;
+    user-select: none;
+    opacity: 0;
+}
+
+/* Floating label styling */
+.contact-form-custom .floating-label {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #232321;
+    font-size: 1.08rem;
+    background: #fffbe9;
+    padding: 0 8px;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(.4, 0, .2, 1);
+    z-index: 2;
+}
