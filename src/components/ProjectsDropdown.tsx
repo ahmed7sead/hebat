@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { motion } from 'framer-motion';
-import { Building2, Home, Package, Hotel } from 'lucide-react';
+import { Building2, Home, Package, Hotel, Calendar } from 'lucide-react';
 
 interface ProjectsDropdownProps {
     triggerRef?: React.RefObject<HTMLDivElement>;
@@ -139,6 +139,12 @@ export const ProjectsDropdown: React.FC<ProjectsDropdownProps> = ({ triggerRef }
                     title: isRTL ? 'النجف والثريات المودرن' : 'Modern Chandeliers',
                     path: '/simple-projects/project2',
                     icon: Package,
+                },
+                {
+                    id: 'project3',
+                    title: isRTL ? 'متحف البحر الأحمر' : 'Red Sea Museum',
+                    path: '/simple-projects/project3',
+                    icon: Calendar,
                 }
             ]
         }

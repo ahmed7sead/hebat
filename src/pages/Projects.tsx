@@ -181,6 +181,18 @@ const Projects = () => {
             category: isRTL ? 'منتجات المصنع' : 'Factory Products',
             year: '2025'
         },
+
+        {
+            id: 'project3',
+            title: isRTL ? 'متحف البحر الاحمر' : 'Red Sea Museum',
+            description: isRTL
+                ? 'تركيب نجفة كريستال ونحاس علي مساحة 220 متر باعلي معايير الجودة وفي زمن قياسي'
+                : 'Installation of a crystal and copper chandelier on an area of ​​220 square meters with the highest quality standards and in record time',
+            image: '/News/finish/preview.jpg',
+            path: '/simple-projects/project3',
+            category: isRTL ? 'مشاريع' : 'Projects',
+            year: '2025'
+        },
     ];
 
     const containerVariants = {

@@ -86,6 +86,11 @@ export const MobileProjectsMenu: React.FC<MobileProjectsMenuProps> = ({ setSheet
                     id: 'project2',
                     title: isRTL ? 'النجف والثريات المودرن' : 'Modern Chandeliers',
                     path: '/simple-projects/project2',
+                },
+                {
+                    id: 'project3',
+                    title: isRTL ? 'متحف البحر الاحمر' : 'Red Sea Museum ',
+                    path: '/simple-projects/project3',
                 }
             ]
         }

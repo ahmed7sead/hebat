@@ -187,12 +187,14 @@ export default function getSimpleProjectsData(isRTL: boolean): SimpleProjectsDat
 
             details: [
                 {
-                    title: isRTL ? ' نجفاتنا في المساجد الفاخرة ' : 'Our Chandeliers in Grand Mosques',
-                    content: isRTL
-                        ? 'باقة مختارة من أعمال مصنعنا في النجف الإسلامي والكلاسيكي التي زيّنت أجمل وأحدث المساجد الإسلامية الفاخرة.'
-                        : 'A selection of our factory’s Islamic and classic chandeliers installed in the most beautiful modern mosques.'
+                    title: isRTL ? 'Our Chandeliers in Grand Mosques' : 'نجفاتنا في المساجد الفاخرة',
+                    content: isRTL ? 'A selection of our factory Islamic and classic chandeliers installed in the most beautiful modern mosques.'
+
+                        : 'باقة مختارة من أعمال مصنعنا في النجف الإسلامي والكلاسيكي التي زيّنت أجمل وأحدث المساجد الفاخرة، لتضفي جواً من الروحانية والفخامة لكل مكان.'
+
                 }
             ],
+
 
             pdfs: [
                 {
@@ -204,7 +206,7 @@ export default function getSimpleProjectsData(isRTL: boolean): SimpleProjectsDat
 
         project2: {
             id: 'project2',
-            title: isRTL ? 'منتجات مصنعنا في الإضاءة الفاخرة والنجف المودرن' : 'Our Factory’s Masterpieces in Luxury & Modern Chandeliers',
+            title: isRTL ? 'منتجات مصنعنا في الإضاءة الفاخرة والنجف المودرن' : 'Our Factorys Masterpieces in Luxury & Modern Chandeliers',
             mainImage: '/projects-page/modern/2.webp',
 
             gallery: [
@@ -317,10 +319,10 @@ export default function getSimpleProjectsData(isRTL: boolean): SimpleProjectsDat
 
             details: [
                 {
-                    title: isRTL ? 'Our Chandeliers in Luxury Hotels' : 'نجفاتنا في الفنادق الفاخرة',
-                    content: isRTL
-                        ? 'باقة مختارة من أعمال مصنعنا في النجف الكريستالي والمودرن التي زيّنت أحدث الفنادق الفاخرة والمنتجعات السياحية وقاعات المؤتمرات الراقية.'
-                        : ' A selection of our factory’s modern and crystal chandeliers installed in the newest luxury hotels, resorts, and conference halls.'
+                    title: isRTL ? 'نجفاتنا في الفنادق الفاخرة' : 'Our Chandeliers in Luxury Hotels',
+                    content: isRTL ? 'باقة مختارة من أعمال مصنعنا في النجف الكريستالي والمودرن التي زيّنت أحدث الفنادق الفاخرة والمنتجعات السياحية وقاعات المؤتمرات الراقية، لتضفي لمسة فخامة لا مثيل لها.'
+
+                        : 'A selection of our factory’s modern and crystal chandeliers installed in the newest luxury hotels, resorts, and conference halls.'
                 },
 
             ],
@@ -332,6 +334,67 @@ export default function getSimpleProjectsData(isRTL: boolean): SimpleProjectsDat
                 },
 
             ]
-        }
+        },
+
+        project3: {
+            id: 'project3',
+            title: isRTL ? 'مشروع اضاءة متحف البحر الاحمر' : 'Red Sea Museum lighting project',
+            mainImage: '/News/finish/3.webp',
+
+            gallery: [
+                {
+                    full: '/News/finish/1.webp',
+                    thumbnail: '/News/finish/thumbs/1.webp'
+                },
+                {
+                    full: '/News/finish/2.webp',
+                    thumbnail: '/News/finish/thumbs/2.webp'
+                }, {
+                    full: '/News/finish/3.webp',
+                    thumbnail: '/News/finish/thumbs/3.webp'
+                }, {
+                    full: '/News/finish/4.webp',
+                    thumbnail: '/News/finish/thumbs/4.webp'
+                }, {
+                    full: '/News/finish/5.webp',
+                    thumbnail: '/News/finish/thumbs/5.webp'
+                }, {
+                    full: '/News/finish/6.webp',
+                    thumbnail: '/News/finish/thumbs/6.webp'
+                }, {
+                    full: '/News/finish/7.webp',
+                    thumbnail: '/News/finish/thumbs/7.webp'
+                }, {
+                    full: '/News/finish/8.webp',
+                    thumbnail: '/News/finish/thumbs/8.webp'
+                }, {
+                    full: '/News/finish/9.webp',
+                    thumbnail: '/News/finish/thumbs/9.webp'
+                }, {
+                    full: '/News/finish/10.webp',
+                    thumbnail: '/News/finish/thumbs/10.webp'
+                }, {
+                    full: '/News/finish/1a.webp',
+                    thumbnail: '/News/finish/thumbs/1a.webp'
+                },
+            ],
+            details: [
+                {
+                    title: isRTL ? 'نجف كريستال ونحاس باستايل خاص على مساحة 220 متر مربع' : 'Crystal and copper chandelier with an area of 220 square meters',
+                    content: isRTL ? 'تم الانتهاء من مشروع إضاءة متحف البحر الأحمر وفق تصاميم الشركة المنفذة، وتم تنفيذ المشروع في زمن قياسي وبأعلى معايير الجودة، ليضفي تجربة بصرية فريدة.'
+
+                        : 'The Red Sea Museum lighting project was completed according to the designs of the engineering company implementing the project and the project was implemented in record time and with the highest quality.'
+                }
+            ],
+
+            pdfs: [
+                {
+                    label: isRTL ? 'تحميل كتيب المشروعات الكتالوج الاسلامي (PDF)' : 'Download Islamic Catalog Projects (PDF)',
+                    url: '/projects-page/muslim/hebat-east-m.pdf'
+                }
+            ]
+
+        },
+
     };
 }
