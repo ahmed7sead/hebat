@@ -39,18 +39,18 @@ const Award: React.FC = () => {
                 {/* Back Button - Modern Floating Style */}
                 <a
                     href="/news"
-                    className="fixed top-24 left-8 z-50 group"
+                    className="fixed top-20 md:top-28 left-4 md:left-8 z-50 group"
                 >
-                    <div className="bg-white/90 backdrop-blur-md px-6 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-3 border border-gold/20 hover:border-gold/40">
+                    <div className="bg-white/90 backdrop-blur-md px-3 py-2 md:px-6 md:py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2 md:gap-3 border border-gold/20 hover:border-gold/40">
                         {isRTL ? (
                             <>
-                                <span className="font-medium text-charcoal group-hover:text-gold transition-colors">العودة للأخبار</span>
-                                <ArrowRight className="w-5 h-5 text-gold group-hover:translate-x-1 transition-transform" />
+                                <span className="text-sm md:text-base font-medium text-charcoal group-hover:text-gold transition-colors">العودة للأخبار</span>
+                                <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-gold group-hover:translate-x-1 transition-transform" />
                             </>
                         ) : (
                             <>
-                                <ArrowLeft className="w-5 h-5 text-gold group-hover:-translate-x-1 transition-transform" />
-                                <span className="font-medium text-charcoal group-hover:text-gold transition-colors">Back to News</span>
+                                <ArrowLeft className="w-4 h-4 md:w-5 md:h-5 text-gold group-hover:-translate-x-1 transition-transform" />
+                                <span className="text-sm md:text-base font-medium text-charcoal group-hover:text-gold transition-colors">Back to News</span>
                             </>
                         )}
                     </div>
@@ -104,7 +104,6 @@ const Award: React.FC = () => {
                                 }
                             </p>
 
-                            {/* Modern CTA Buttons */}
                             <div className="flex flex-wrap gap-4 mb-8">
                                 <button
                                     onClick={() => scrollToSection('technical')}
@@ -115,6 +114,17 @@ const Award: React.FC = () => {
                                     <div className="absolute inset-0 rounded-full bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </button>
 
+                                <button
+                                    onClick={() => scrollToSection('phases')}
+                                    className="group relative px-6 py-3 bg-gradient-to-r from-charcoal via-charcoal/90 to-charcoal/80 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 overflow-hidden"
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/20 to-gold/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
+                                    <div className="relative w-5 h-5 rounded-full bg-white/10 flex items-center justify-center group-hover:rotate-180 transition-transform duration-500">
+                                        <Calendar className="w-3 h-3" />
+                                    </div>
+                                    <span className="relative">{isRTL ? 'مراحل المشروع' : 'Project Phases'}</span>
+                                    <ArrowRightIcon className={`relative w-4 h-4 group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+                                </button>
                                 <button
                                     onClick={() => scrollToSection('partners')}
                                     className="group relative px-6 py-3 bg-white text-charcoal rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex items-center gap-2 border-2 border-gold/30 hover:border-gold"
@@ -231,8 +241,8 @@ const Award: React.FC = () => {
                             {/* Content */}
                             <p className="text-lg text-charcoal/80 leading-relaxed mb-6 relative z-10">
                                 {isRTL
-                                    ? 'تضمّن تنفيذ المشروع تركيب وحدات إضاءة كريستالية ونحاسية موزّعة على مساحة 220 مترًا مربعًا من سقف البهو، ضمن بلوكات دقيقة التصميم لضمان توازن الإضاءة وتوزيعها بشكل متجانس داخل المتحف. وقد شمل العمل تنسيق القطع، ومعالجة نقاط التعليق، وتحقيق أعلى مستويات الثبات والجودة في التركيب.'
-                                    : 'The project included installing crystal and brass lighting units distributed across 220 square meters of the main hall ceiling. The fixtures were arranged in precision-engineered blocks to ensure balanced and uniform illumination throughout the museum space. The work involved alignment, mounting point preparation, and achieving high structural stability and installation quality.'
+                                    ? 'تضمّن تنفيذ المشروع تركيب وحدات إضاءة كريستالية ونحاسية موزّعة على مساحة 220 مترًا مربعًا من سقف البهو، ضمن بلوكات صغيرة .'
+                                    : 'The project included installing crystal and brass lighting units distributed across 220 square meters of the main hall .'
                                 }
                             </p>
 
@@ -375,8 +385,8 @@ const Award: React.FC = () => {
                                 {/* Main text */}
                                 <p className="text-lg text-charcoal/80 leading-relaxed mb-8 group-hover:text-charcoal/90 transition-colors duration-300">
                                     {isRTL
-                                        ? 'جاء تنفيذ المشروع ضمن تعاون مباشر مع وزارة الثكافة السعودية، وشركة التصميم العالمية Chatillon، والاستشاري الفني EGIS. ويساهم هذا التكامل بين الجهات في ضمان توافق الحلول التنفيذية مع الرؤية المعمارية للمتحف، وتحقيق أعلى مستوى من الانسجام بين الهوية البصرية والإضاءة النهائية.'
-                                        : 'The project was executed in direct collaboration with the Saudi Ministry of Culture, the international design firm Chatillon, and the technical consultant EGIS. This integrated partnership ensured full alignment between the museum architectural vision and the final lighting installation, achieving a refined and coherent visual experience.'
+                                        ? 'جاء تنفيذ المشروع ضمن تعاون مباشر مع وزارة الثكافة السعودية، وشركة التصميم العالمية Chatillon، والاستشاري الفني EGIS. '
+                                        : 'The project was executed in direct collaboration with the Saudi Ministry of Culture, the international design firm Chatillon .'
                                     }
                                 </p>
 
@@ -395,328 +405,329 @@ const Award: React.FC = () => {
 
             {/* Section 3 - Project Phases (New Creative Section) */}
             <ScrollObserver animation="fade-up" threshold={0.3} delay={50} className="py-20 bg-gradient-to-br from-cream/30 to-white relative overflow-hidden">
-                {/* Background Decorative Elements */}
-                <div className="absolute top-10 left-10 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
-                <div className="absolute bottom-10 right-10 w-40 h-40 bg-charcoal/5 rounded-full blur-3xl"></div>
+                <div ref={(el) => (sectionsRef.current['phases'] = el)} className="scroll-mt-24">
+                    <div className="absolute top-10 left-10 w-32 h-32 bg-gold/5 rounded-full blur-2xl"></div>
+                    <div className="absolute bottom-10 right-10 w-40 h-40 bg-charcoal/5 rounded-full blur-3xl"></div>
 
-                <div className="container-custom mx-auto">
-                    {/* Section Header */}
-                    <div className="text-center mb-16">
-                        <div className="inline-flex items-center gap-2 bg-gold/10 px-6 py-2 rounded-full mb-6">
-                            <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
-                            <span className="text-gold font-semibold text-sm">
-                                {isRTL ? 'رحلة المشروع' : 'Project Journey'}
-                            </span>
-                        </div>
-                        <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mb-4">
-                            {isRTL ? 'مراحل تنفيذ المشروع' : 'Project Phases'}
-                        </h2>
-                        <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
-                            {isRTL
-                                ? 'رحلة متكاملة من التخطيط إلى التسليم النهائي'
-                                : 'A complete journey from planning to final delivery'
-                            }
-                        </p>
-                    </div>
-
-                    {/* Cards with Arrows */}
-                    <div className="relative">
-                        {/* Desktop Grid */}
-                        <div className="hidden lg:grid lg:grid-cols-3 gap-6 items-center">
-                            {/* Card 1 - Planning Phase */}
-                            <ScrollObserver animation="fade-up" threshold={0.3} delay={100}>
-                                <a href="/news/planning-phase" className="group relative block">
-                                    <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
-                                        <div className="relative h-64 overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
-                                            <img src="/News/hero-1.jpeg" alt="Planning Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                                            <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
-                                                <span className="text-white font-bold text-xl">1</span>
-                                            </div>
-                                        </div>
-                                        <div className="p-6 relative">
-                                            <div className="flex items-start gap-3 mb-3">
-                                                <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <FileText className="w-5 h-5 text-gold" />
-                                                </div>
-                                                <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
-                                                    {isRTL ? 'مرحلة الاتفاق والتخطيط' : 'Agreement & Planning Phase'}
-                                                </h3>
-                                            </div>
-                                            <p className="text-charcoal/70 text-sm mb-4">
-                                                {isRTL ? 'وضع الأسس والتخطيط الدقيق للمشروع' : 'Setting foundations and precise project planning'}
-                                            </p>
-                                            <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
-                                                <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
-                                                <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </ScrollObserver>
-
-                            {/* Connecting Arrow 1 to 2 */}
-                            <div className="flex justify-center items-center -mx-8 z-10">
-                                <div className="relative">
-                                    {!isRTL && (
-                                        <div className="flex items-center">
-                                            <div className="h-1 w-16 bg-gradient-to-r from-gold via-gold/50 to-gold/30"></div>
-                                            <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[12px] border-l-gold/30"></div>
-                                        </div>
-                                    )}
-                                    <div className={`${isRTL ? '' : 'absolute -bottom-8 left-1/2 transform -translate-x-1/2'} bg-gold/10 px-3 py-1 rounded-full`}>
-                                        <span className="text-xs text-gold font-medium whitespace-nowrap">
-                                            {isRTL ? 'المرحلة التالية' : 'Next Phase'}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Card 2 - Execution Phase */}
-                            <ScrollObserver animation="fade-up" threshold={0.3} delay={200}>
-                                <a href="/news/execution-phase" className="group relative block">
-                                    <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
-                                        <div className="relative h-64 overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
-                                            <img src="/News/mr1.webp" alt="Execution Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                                            <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
-                                                <span className="text-white font-bold text-xl">2</span>
-                                            </div>
-                                        </div>
-                                        <div className="p-6 relative">
-                                            <div className="flex items-start gap-3 mb-3">
-                                                <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <Hammer className="w-5 h-5 text-gold" />
-                                                </div>
-                                                <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
-                                                    {isRTL ? 'مرحلة التنفيذ والتركيب' : 'Execution & Installation Phase'}
-                                                </h3>
-                                            </div>
-                                            <p className="text-charcoal/70 text-sm mb-4">
-                                                {isRTL ? 'التنفيذ الدقيق والتركيب الاحترافي' : 'Precise execution and professional installation'}
-                                            </p>
-                                            <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
-                                                <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
-                                                <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </ScrollObserver>
-
-                            {/* Connecting Arrow 2 to 3 */}
-                            <div className="flex justify-center items-center -mx-8 z-10">
-                                <div className="relative">
-                                    {!isRTL && (
-                                        <div className="flex items-center">
-                                            <div className="h-1 w-16 bg-gradient-to-r from-gold via-gold/50 to-gold/30"></div>
-                                            <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[12px] border-l-gold/30"></div>
-                                        </div>
-                                    )}
-                                    <div className={`${isRTL ? '' : 'absolute -bottom-8 left-1/2 transform -translate-x-1/2'} bg-gold/10 px-3 py-1 rounded-full`}>
-                                        <span className="text-xs text-gold font-medium whitespace-nowrap">
-                                            {isRTL ? 'المرحلة الأخيرة' : 'Final Phase'}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Card 3 - Delivery Phase */}
-                            <ScrollObserver animation="fade-up" threshold={0.3} delay={300}>
-                                <a href="/news/delivery-phase" className="group relative block">
-                                    <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
-                                        <div className="relative h-64 overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
-                                            <img src="/News/finish/3t.webp" alt="Delivery Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                                            <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
-                                                <span className="text-white font-bold text-xl">3</span>
-                                            </div>
-                                            <div className="absolute top-4 right-4 bg-green-500 rounded-full p-2 shadow-lg z-20">
-                                                <CheckCircle className="w-5 h-5 text-white" />
-                                            </div>
-                                        </div>
-                                        <div className="p-6 relative">
-                                            <div className="flex items-start gap-3 mb-3">
-                                                <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <CheckCircle className="w-5 h-5 text-gold" />
-                                                </div>
-                                                <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
-                                                    {isRTL ? 'مرحلة تسليم المشروع' : 'Project Delivery Phase'}
-                                                </h3>
-                                            </div>
-                                            <p className="text-charcoal/70 text-sm mb-4">
-                                                {isRTL ? 'التسليم النهائي بأعلى معايير الجودة' : 'Final delivery with highest quality standards'}
-                                            </p>
-                                            <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
-                                                <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
-                                                <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </ScrollObserver>
-                        </div>
-
-                        {/* Mobile Layout */}
-                        <div className="lg:hidden flex flex-col">
-                            {/* Card 1 */}
-                            <ScrollObserver animation="fade-up" threshold={0.3} delay={100}>
-                                <a href="/news/planning-phase" className="group relative block">
-                                    <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
-                                        <div className="relative h-64 overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
-                                            <img src="/News/cover.webp" alt="Planning Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                                            <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
-                                                <span className="text-white font-bold text-xl">1</span>
-                                            </div>
-                                        </div>
-                                        <div className="p-6 relative">
-                                            <div className="flex items-start gap-3 mb-3">
-                                                <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <FileText className="w-5 h-5 text-gold" />
-                                                </div>
-                                                <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
-                                                    {isRTL ? 'مرحلة الاتفاق والتخطيط' : 'Agreement & Planning Phase'}
-                                                </h3>
-                                            </div>
-                                            <p className="text-charcoal/70 text-sm mb-4">
-                                                {isRTL ? 'وضع الأسس والتخطيط الدقيق للمشروع' : 'Setting foundations and precise project planning'}
-                                            </p>
-                                            <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
-                                                <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
-                                                <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </ScrollObserver>
-
-                            {/* Mobile Arrow 1 to 2 */}
-                            <div className="flex justify-center my-6">
-                                <div className="flex flex-col items-center gap-2">
-                                    <div className="w-1 h-16 bg-gradient-to-b from-gold via-gold/50 to-gold/30"></div>
-                                    <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-gold/30"></div>
-
-                                </div>
-                            </div>
-
-                            {/* Card 2 */}
-                            <ScrollObserver animation="fade-up" threshold={0.3} delay={200}>
-                                <a href="/news/execution-phase" className="group relative block">
-                                    <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
-                                        <div className="relative h-64 overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
-                                            <img src="/News/hero-1.jpeg" alt="Execution Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                                            <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
-                                                <span className="text-white font-bold text-xl">2</span>
-                                            </div>
-                                        </div>
-                                        <div className="p-6 relative">
-                                            <div className="flex items-start gap-3 mb-3">
-                                                <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <Hammer className="w-5 h-5 text-gold" />
-                                                </div>
-                                                <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
-                                                    {isRTL ? 'مرحلة التنفيذ والتركيب' : 'Execution & Installation Phase'}
-                                                </h3>
-                                            </div>
-                                            <p className="text-charcoal/70 text-sm mb-4">
-                                                {isRTL ? 'التنفيذ الدقيق والتركيب الاحترافي' : 'Precise execution and professional installation'}
-                                            </p>
-                                            <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
-                                                <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
-                                                <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </ScrollObserver>
-
-                            {/* Mobile Arrow 2 to 3 */}
-                            <div className="flex justify-center my-6">
-                                <div className="flex flex-col items-center gap-2">
-                                    <div className="w-1 h-16 bg-gradient-to-b from-gold via-gold/50 to-gold/30"></div>
-                                    <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-gold/30"></div>
-
-                                </div>
-                            </div>
-
-                            {/* Card 3 */}
-                            <ScrollObserver animation="fade-up" threshold={0.3} delay={300}>
-                                <a href="/news/delivery-phase" className="group relative block">
-                                    <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
-                                        <div className="relative h-64 overflow-hidden">
-                                            <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
-                                            <img src="/News/hero-3.webp" alt="Delivery Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
-                                            <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
-                                                <span className="text-white font-bold text-xl">3</span>
-                                            </div>
-                                            <div className="absolute top-4 right-4 bg-green-500 rounded-full p-2 shadow-lg z-20">
-                                                <CheckCircle className="w-5 h-5 text-white" />
-                                            </div>
-                                        </div>
-                                        <div className="p-6 relative">
-                                            <div className="flex items-start gap-3 mb-3">
-                                                <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                                                    <CheckCircle className="w-5 h-5 text-gold" />
-                                                </div>
-                                                <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
-                                                    {isRTL ? 'مرحلة تسليم المشروع' : 'Project Delivery Phase'}
-                                                </h3>
-                                            </div>
-                                            <p className="text-charcoal/70 text-sm mb-4">
-                                                {isRTL ? 'التسليم النهائي بأعلى معايير الجودة' : 'Final delivery with highest quality standards'}
-                                            </p>
-                                            <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
-                                                <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
-                                                <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </ScrollObserver>
-                        </div>
-                    </div>
-
-
-
-                    {/* Card 2 already exists here in the grid */}
-
-                    {/* Mobile Arrow 2 to 3 */}
-                    <div className="lg:hidden flex justify-center my-6">
-                        <div className="flex flex-col items-center gap-2">
-                            <div className="w-1 h-16 bg-gradient-to-b from-gold via-gold/50 to-gold/30"></div>
-                            <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-gold/30"></div>
-                            <div className="bg-gold/10 px-4 py-2 rounded-full mt-2">
-                                <span className="text-xs text-gold font-medium whitespace-nowrap">
-                                    {isRTL ? 'النتيجة النهائية' : 'Final Result'}
+                    <div className="container-custom mx-auto">
+                        {/* Section Header */}
+                        <div className="text-center mb-16">
+                            <div className="inline-flex items-center gap-2 bg-gold/10 px-6 py-2 rounded-full mb-6">
+                                <div className="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+                                <span className="text-gold font-semibold text-sm">
+                                    {isRTL ? 'رحلة المشروع' : 'Project Journey'}
                                 </span>
                             </div>
+                            <h2 className="text-4xl lg:text-5xl font-bold text-charcoal mb-4">
+                                {isRTL ? 'مراحل تنفيذ المشروع' : 'Project Phases'}
+                            </h2>
+                            <p className="text-lg text-charcoal/70 max-w-2xl mx-auto">
+                                {isRTL
+                                    ? 'رحلة متكاملة من التخطيط إلى التسليم النهائي'
+                                    : 'A complete journey from planning to final delivery'
+                                }
+                            </p>
                         </div>
-                    </div>
 
-                    {/* Bottom Timeline Indicator */}
-                    <div className="mt-16 flex justify-center">
-                        <div className="inline-flex items-center gap-4 bg-white/80 backdrop-blur-sm px-8 py-4 rounded-full shadow-lg">
-                            <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 bg-gold rounded-full"></div>
-                                <span className="text-sm text-charcoal font-medium">
-                                    {isRTL ? '14 يوم' : '14 Days'}
-                                </span>
+                        {/* Cards with Arrows */}
+                        <div className="relative">
+                            {/* Desktop Grid */}
+                            <div className="hidden lg:grid lg:grid-cols-3 gap-6 items-center">
+                                {/* Card 1 - Planning Phase */}
+                                <ScrollObserver animation="fade-up" threshold={0.3} delay={100}>
+                                    <a href="/news/planning-phase" className="group relative block">
+                                        <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
+                                            <div className="relative h-64 overflow-hidden">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
+                                                <img src="/News/hero-1.jpeg" alt="Planning Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
+                                                    <span className="text-white font-bold text-xl">1</span>
+                                                </div>
+                                            </div>
+                                            <div className="p-6 relative">
+                                                <div className="flex items-start gap-3 mb-3">
+                                                    <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <FileText className="w-5 h-5 text-gold" />
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
+                                                        {isRTL ? 'مرحلة الاتفاق والتخطيط' : 'Agreement & Planning Phase'}
+                                                    </h3>
+                                                </div>
+                                                <p className="text-charcoal/70 text-sm mb-4">
+                                                    {isRTL ? 'وضع الأسس والتخطيط الدقيق للمشروع' : 'Setting foundations and precise project planning'}
+                                                </p>
+                                                <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
+                                                    <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
+                                                    <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ScrollObserver>
+
+                                {/* Connecting Arrow 1 to 2 */}
+                                <div className="flex justify-center items-center -mx-8 z-10">
+                                    <div className="relative">
+                                        {!isRTL && (
+                                            <div className="flex items-center">
+                                                <div className="h-1 w-16 bg-gradient-to-r from-gold via-gold/50 to-gold/30"></div>
+                                                <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[12px] border-l-gold/30"></div>
+                                            </div>
+                                        )}
+                                        <div className={`${isRTL ? '' : 'absolute -bottom-8 left-1/2 transform -translate-x-1/2'} bg-gold/10 px-3 py-1 rounded-full`}>
+                                            <span className="text-xs text-gold font-medium whitespace-nowrap">
+                                                {isRTL ? 'المرحلة التالية' : 'Next Phase'}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Card 2 - Execution Phase */}
+                                <ScrollObserver animation="fade-up" threshold={0.3} delay={200}>
+                                    <a href="/news/execution-phase" className="group relative block">
+                                        <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
+                                            <div className="relative h-64 overflow-hidden">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
+                                                <img src="/News/mr1.webp" alt="Execution Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
+                                                    <span className="text-white font-bold text-xl">2</span>
+                                                </div>
+                                            </div>
+                                            <div className="p-6 relative">
+                                                <div className="flex items-start gap-3 mb-3">
+                                                    <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <Hammer className="w-5 h-5 text-gold" />
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
+                                                        {isRTL ? 'مرحلة التنفيذ والتركيب' : 'Execution & Installation Phase'}
+                                                    </h3>
+                                                </div>
+                                                <p className="text-charcoal/70 text-sm mb-4">
+                                                    {isRTL ? 'التنفيذ الدقيق والتركيب الاحترافي' : 'Precise execution and professional installation'}
+                                                </p>
+                                                <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
+                                                    <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
+                                                    <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ScrollObserver>
+
+                                {/* Connecting Arrow 2 to 3 */}
+                                <div className="flex justify-center items-center -mx-8 z-10">
+                                    <div className="relative">
+                                        {!isRTL && (
+                                            <div className="flex items-center">
+                                                <div className="h-1 w-16 bg-gradient-to-r from-gold via-gold/50 to-gold/30"></div>
+                                                <div className="w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-l-[12px] border-l-gold/30"></div>
+                                            </div>
+                                        )}
+                                        <div className={`${isRTL ? '' : 'absolute -bottom-8 left-1/2 transform -translate-x-1/2'} bg-gold/10 px-3 py-1 rounded-full`}>
+                                            <span className="text-xs text-gold font-medium whitespace-nowrap">
+                                                {isRTL ? 'المرحلة الأخيرة' : 'Final Phase'}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Card 3 - Delivery Phase */}
+                                <ScrollObserver animation="fade-up" threshold={0.3} delay={300}>
+                                    <a href="/news/delivery-phase" className="group relative block">
+                                        <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
+                                            <div className="relative h-64 overflow-hidden">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
+                                                <img src="/News/finish/3t.webp" alt="Delivery Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
+                                                    <span className="text-white font-bold text-xl">3</span>
+                                                </div>
+                                                <div className="absolute top-4 right-4 bg-green-500 rounded-full p-2 shadow-lg z-20">
+                                                    <CheckCircle className="w-5 h-5 text-white" />
+                                                </div>
+                                            </div>
+                                            <div className="p-6 relative">
+                                                <div className="flex items-start gap-3 mb-3">
+                                                    <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <CheckCircle className="w-5 h-5 text-gold" />
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
+                                                        {isRTL ? 'مرحلة تسليم المشروع' : 'Project Delivery Phase'}
+                                                    </h3>
+                                                </div>
+                                                <p className="text-charcoal/70 text-sm mb-4">
+                                                    {isRTL ? 'التسليم النهائي بأعلى معايير الجودة' : 'Final delivery with highest quality standards'}
+                                                </p>
+                                                <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
+                                                    <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
+                                                    <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ScrollObserver>
                             </div>
-                            <div className="w-px h-6 bg-charcoal/20"></div>
-                            <div className="flex items-center gap-2">
-                                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                                <span className="text-sm text-charcoal font-medium">
-                                    {isRTL ? 'اكتمل بنجاح' : 'Successfully Completed'}
-                                </span>
+
+                            {/* Mobile Layout */}
+                            <div className="lg:hidden flex flex-col">
+                                {/* Card 1 */}
+                                <ScrollObserver animation="fade-up" threshold={0.3} delay={100}>
+                                    <a href="/news/planning-phase" className="group relative block">
+                                        <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
+                                            <div className="relative h-64 overflow-hidden">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
+                                                <img src="/News/cover.webp" alt="Planning Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
+                                                    <span className="text-white font-bold text-xl">1</span>
+                                                </div>
+                                            </div>
+                                            <div className="p-6 relative">
+                                                <div className="flex items-start gap-3 mb-3">
+                                                    <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <FileText className="w-5 h-5 text-gold" />
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
+                                                        {isRTL ? 'مرحلة الاتفاق والتخطيط' : 'Agreement & Planning Phase'}
+                                                    </h3>
+                                                </div>
+                                                <p className="text-charcoal/70 text-sm mb-4">
+                                                    {isRTL ? 'وضع الأسس والتخطيط الدقيق للمشروع' : 'Setting foundations and precise project planning'}
+                                                </p>
+                                                <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
+                                                    <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
+                                                    <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ScrollObserver>
+
+                                {/* Mobile Arrow 1 to 2 */}
+                                <div className="flex justify-center my-6">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <div className="w-1 h-16 bg-gradient-to-b from-gold via-gold/50 to-gold/30"></div>
+                                        <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-gold/30"></div>
+
+                                    </div>
+                                </div>
+
+                                {/* Card 2 */}
+                                <ScrollObserver animation="fade-up" threshold={0.3} delay={200}>
+                                    <a href="/news/execution-phase" className="group relative block">
+                                        <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
+                                            <div className="relative h-64 overflow-hidden">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
+                                                <img src="/News/hero-1.jpeg" alt="Execution Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
+                                                    <span className="text-white font-bold text-xl">2</span>
+                                                </div>
+                                            </div>
+                                            <div className="p-6 relative">
+                                                <div className="flex items-start gap-3 mb-3">
+                                                    <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <Hammer className="w-5 h-5 text-gold" />
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
+                                                        {isRTL ? 'مرحلة التنفيذ والتركيب' : 'Execution & Installation Phase'}
+                                                    </h3>
+                                                </div>
+                                                <p className="text-charcoal/70 text-sm mb-4">
+                                                    {isRTL ? 'التنفيذ الدقيق والتركيب الاحترافي' : 'Precise execution and professional installation'}
+                                                </p>
+                                                <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
+                                                    <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
+                                                    <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ScrollObserver>
+
+                                {/* Mobile Arrow 2 to 3 */}
+                                <div className="flex justify-center my-6">
+                                    <div className="flex flex-col items-center gap-2">
+                                        <div className="w-1 h-16 bg-gradient-to-b from-gold via-gold/50 to-gold/30"></div>
+                                        <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-gold/30"></div>
+
+                                    </div>
+                                </div>
+
+                                {/* Card 3 */}
+                                <ScrollObserver animation="fade-up" threshold={0.3} delay={300}>
+                                    <a href="/news/delivery-phase" className="group relative block">
+                                        <div className="relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gold/20 hover:border-gold/50">
+                                            <div className="relative h-64 overflow-hidden">
+                                                <div className="absolute inset-0 bg-gradient-to-br from-gold/20 to-transparent z-10"></div>
+                                                <img src="/News/hero-3.webp" alt="Delivery Phase" className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                                                <div className="absolute top-4 left-4 w-12 h-12 bg-gold rounded-full flex items-center justify-center shadow-lg z-20">
+                                                    <span className="text-white font-bold text-xl">3</span>
+                                                </div>
+                                                <div className="absolute top-4 right-4 bg-green-500 rounded-full p-2 shadow-lg z-20">
+                                                    <CheckCircle className="w-5 h-5 text-white" />
+                                                </div>
+                                            </div>
+                                            <div className="p-6 relative">
+                                                <div className="flex items-start gap-3 mb-3">
+                                                    <div className="w-10 h-10 bg-gold/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                        <CheckCircle className="w-5 h-5 text-gold" />
+                                                    </div>
+                                                    <h3 className="text-xl font-bold text-charcoal group-hover:text-gold transition-colors duration-300">
+                                                        {isRTL ? 'مرحلة تسليم المشروع' : 'Project Delivery Phase'}
+                                                    </h3>
+                                                </div>
+                                                <p className="text-charcoal/70 text-sm mb-4">
+                                                    {isRTL ? 'التسليم النهائي بأعلى معايير الجودة' : 'Final delivery with highest quality standards'}
+                                                </p>
+                                                <div className="flex items-center gap-2 text-gold group-hover:gap-3 transition-all duration-300">
+                                                    <span className="text-sm font-medium">{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
+                                                    <ArrowRightIcon className={`w-4 h-4 transform group-hover:translate-x-1 transition-transform ${isRTL ? 'rotate-180' : ''}`} />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ScrollObserver>
                             </div>
                         </div>
-                    </div>
+
+
+
+                        {/* Card 2 already exists here in the grid */}
+
+                        {/* Mobile Arrow 2 to 3 */}
+                        <div className="lg:hidden flex justify-center my-6">
+                            <div className="flex flex-col items-center gap-2">
+                                <div className="w-1 h-16 bg-gradient-to-b from-gold via-gold/50 to-gold/30"></div>
+                                <div className="w-0 h-0 border-l-[8px] border-l-transparent border-r-[8px] border-r-transparent border-t-[12px] border-t-gold/30"></div>
+                                <div className="bg-gold/10 px-4 py-2 rounded-full mt-2">
+                                    <span className="text-xs text-gold font-medium whitespace-nowrap">
+                                        {isRTL ? 'النتيجة النهائية' : 'Final Result'}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Bottom Timeline Indicator */}
+                        <div className="mt-16 flex justify-center">
+                            <div className="inline-flex items-center gap-4 bg-white/80 backdrop-blur-sm px-8 py-4 rounded-full shadow-lg">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-3 h-3 bg-gold rounded-full"></div>
+                                    <span className="text-sm text-charcoal font-medium">
+                                        {isRTL ? '14 يوم' : '14 Days'}
+                                    </span>
+                                </div>
+                                <div className="w-px h-6 bg-charcoal/20"></div>
+                                <div className="flex items-center gap-2">
+                                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                                    <span className="text-sm text-charcoal font-medium">
+                                        {isRTL ? 'اكتمل بنجاح' : 'Successfully Completed'}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>                </div>
+
                 </div>
-            </ScrollObserver>
+            </ScrollObserver >
             {/* Final Section with Video */}
-            <ScrollObserver animation="fade-up" threshold={0.3} delay={50} className="py-20 bg-gradient-to-br from-charcoal/5 to-gold/5">
+            < ScrollObserver animation="fade-up" threshold={0.3} delay={50} className="py-20 bg-gradient-to-br from-charcoal/5 to-gold/5" >
                 <div
                     ref={(el) => (sectionsRef.current['video'] = el)}
                     className="container-custom mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center scroll-mt-24"
@@ -759,8 +770,8 @@ const Award: React.FC = () => {
                         <Card className="p-8 lg:p-16 elegant-shadow border-none bg-white/80 backdrop-blur-sm hover:bg-white/90 hover:shadow-xl transition-all duration-500">
                             <blockquote className="text-2xl lg:text-3xl font-bold text-charcoal leading-relaxed mb-6">
                                 {isRTL
-                                    ? '"أنهى فريق Hebat East تنفيذ مشروع تركيب النجف الكريستالية والنحاسية في المتحف الأحمر بجدة التاريخية على مساحة 220 متر مربع. يشرف المهندس أشرف قنديل، مدير المشاريع، بعرض الفنيات الدقيقة للعمل، معربًا عن فخره بالجهود الاستثنائية للفريق الذي أكمل المهمة في زمن قياسي مع الالتزام بأعلى معايير الجودة والدقة."'
-                                    : '"The Hebat East team has successfully completed the installation of crystal and brass chandeliers at the Red Museum in Historic Jeddah, covering 220 square meters. Eng. Ashraf Kandil, Projects Director, proudly showcased the technical details of the work, expressing his pride in the team exceptional efforts to accomplish the project within a record timeframe while maintaining the highest standards of quality and precision."'
+                                    ? 'يشرف المهندس أشرف قنديل، مدير المشاريع، بعرض الفنيات الدقيقة للعمل، معربًا عن فخره بالجهود الاستثنائية للفريق الذي أكمل المهمة في زمن قياسي مع الالتزام بأعلى معايير الجودة والدقة."'
+                                    : 'Eng. Ashraf Kandil, Projects Director, proudly showcased the technical details of the work, expressing his pride in the team exceptional efforts to accomplish the project within a record timeframe while maintaining the highest standards of quality and precision."'
                                 }
                             </blockquote>
                             <footer className="flex items-center gap-4 group">
