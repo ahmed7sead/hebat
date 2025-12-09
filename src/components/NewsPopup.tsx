@@ -138,7 +138,7 @@ const NewsPopup = () => {
                 </div>
 
                 <h3 className="font-semibold text-charcoal text-base relative">
-                  {isRTL ? 'أخبار حصرية' : 'Breaking News'}
+                  {isRTL ? 'إنجاز جديد' : 'Major Achievement'}
                 </h3>
               </div>
 
@@ -161,10 +161,10 @@ const NewsPopup = () => {
                     Ensures user goes to top of news page on click
                     Mobile Optimized Height
                     ===================================================== */}
-                <Link to="/news/ritz-carlton" onClick={handleNewsClick}>
+                <Link to="/news/excellence-award" onClick={handleNewsClick}>
                   <div className="relative overflow-hidden rounded-xl group cursor-pointer mt-1 mb-4">
                     <img
-                      src="News/mr1.webp"
+                      src="News/finish/poster-after.jpg"
                       alt="Latest News"
                       className="w-full h-40 sm:h-40 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -188,8 +188,8 @@ const NewsPopup = () => {
                   ${isRTL ? 'text-right font-tajawal' : 'text-left font-playfair'}
                 `}>
                   {isRTL
-                    ? 'هبات إيست تبدأ التنفيذ في متحف البحر الأحمر!'
-                    : 'HEBAT EAST Begins Red Sea Museum Execution!'
+                    ? 'إنجاز استثنائي: متحف البحر الأحمر بحلة جديدة!'
+                    : 'Record Achievement: Red Sea Museum Transformed!'
                   }
                 </h4>
 
@@ -199,8 +199,8 @@ const NewsPopup = () => {
                   ${isRTL ? 'text-right font-tajawal' : 'text-left'}
                 `}>
                   {isRTL
-                    ? 'انطلقت أعمال التركيب والتنفيذ الفعلية لمشروع اضاءة متحف البحر الأحمر التاريخي. فريقنا يعمل بكامل طاقته لتحويل الرؤية إلى واقع مذهل...'
-                    : 'Installation and construction work has officially started at the Red Sea Museum Lighting project. Our team is working at full capacity to turn vision into stunning reality...'
+                    ? 'أنجزنا مشروع إضاءة متحف البحر الأحمر في زمن قياسي! تصميم مبتكر وتنفيذ احترافي حوّل المتحف لتحفة فنية مضيئة تليق بعراقته...'
+                    : 'We completed the Red Sea Museum lighting project in record time! Innovative design and professional execution transformed the museum into a luminous masterpiece...'
                   }
                 </p>
 
@@ -221,7 +221,7 @@ const NewsPopup = () => {
                     {/* Button shine effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
-                    <span className="relative z-10">{isRTL ? 'شاهد التفاصيل' : 'Discover More'}</span>
+                    <span className="relative z-10">{isRTL ? 'شاهد الإنجاز' : 'View Achievement'}</span>
                     <ExternalLink className={`w-4 h-4 ${isRTL ? 'mr-2' : 'ml-2'} relative z-10 transition-transform duration-300 group-hover:translate-x-1`} />
                   </Button>
                 </Link>
@@ -234,7 +234,7 @@ const NewsPopup = () => {
         {/* Enhanced floating notification elements - Red bouncing ball with reduced speed */}
         <div className={`
           absolute -top-2 ${isRTL ? '-left-2' : '-right-2'} 
-          w-5 h-5 bg-gradient-to-br from-red-500 to-red-600 rounded-full 
+          w-5 h-5 bg-gradient-to-br from-green-500 to-green-600 rounded-full 
           shadow-lg flex items-center justify-center
         `}
           style={{

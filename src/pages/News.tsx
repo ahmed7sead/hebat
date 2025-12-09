@@ -8,14 +8,29 @@ import { useLanguage } from '../context/LanguageContext';
 const News = () => {
     const { isRTL } = useLanguage();
     const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+    const [currentFeaturedIndex, setCurrentFeaturedIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
+    const handlePrevious = () => {
+        if (isTransitioning) return;
+        setIsTransitioning(true);
+        setCurrentFeaturedIndex((prev) => (prev === 0 ? newsItems.length - 1 : prev - 1));
+        setTimeout(() => setIsTransitioning(false), 700);
+    };
+
+    const handleNext = () => {
+        if (isTransitioning) return;
+        setIsTransitioning(true);
+        setCurrentFeaturedIndex((prev) => (prev === newsItems.length - 1 ? 0 : prev + 1));
+        setTimeout(() => setIsTransitioning(false), 700);
+    };
+
     // بيانات الأخبار مع المسارات الصحيحة
     const newsItems = [
-
         {
             id: 1,
             title: isRTL
@@ -23,72 +38,66 @@ const News = () => {
                 : 'Architectural Lighting Masterpiece at the Sadim Victims Mosque',
             summary: isRTL
                 ? 'نجفة مركزية ذات تصميم هندسي معقّد، تجمع بين الدقة المعمارية والابتكار في توزيع الإضاءة، لتصبح أحد أبرز أعمال شركة هبات الشرق في المساجد الحديثة.'
-                : 'A central masterpiece chandelier with a clean, detailed geometric design—one of Hebat East’s standout mosque projects.',
+                : 'A central masterpiece chandelier with a clean, detailed geometric design—one of Hebat East standout mosque projects.',
             date: isRTL ? 'نوفمبر 2025' : 'November 2025',
             image: '/projects-page/mosque5/1.jpeg',
             category: isRTL ? 'مشاريع مساجد' : 'Projects',
             link: '/news/ministry-partnership'
-        }
-        ,
+        },
         {
             id: 2,
             title: isRTL
-                ? 'بدء تركيب النجف في المتحف الأحمر'
-                : 'Red Museum Chandelier Installation Begins',
-
+                ? 'الانتهاء من مشروع متحف البحر الاحمر'
+                : 'Rixos Hotel Project Completed',
             summary: isRTL
-                ? 'الشركة بدأت أعمال تركيب النجف في موقع المتحف الأحمر بجدة التاريخية، ضمن الشراكة مع وزارة الثقافة لتطوير الإضاءة.'
-                : 'Hebat East has commenced the installation of chandeliers at the Red Museum in Historic Jeddah, as part of the strategic partnership with the Ministry of Culture for lighting development.',
-
-            date: isRTL ? 'ديسمبر 2025' : 'December 2025',
-
-            image: '/News/mrr.webp',
-
+                ? 'اتمام التنفيذ والتركيبات لمشروع اضاءة متحف البحر الاحمر في وقت قياسي.'
+                : 'Completion of the implementation and installation of the Red Sea Museum lighting project in record time.',
+            date: isRTL ? 'ديسمبر 2025' : 'Dec 2025',
+            image: '/News/finish/poster-after.webp',
             category: isRTL ? 'مشاريع' : 'Projects',
-
-            link: '/news/ritz-carlton'
-        }
-        ,
+            link: '/news/excellence-award'
+        },
         {
             id: 3,
             title: isRTL
-                ? 'إنجاز أعمال الإضاءة في فندق مكارم المدينة'
-                : 'Completion of Lighting Works at Makarem Al-Madina Hotel',
-
+                ? 'بدء تركيب النجف في المتحف الأحمر'
+                : 'Red Museum Chandelier Installation Begins',
             summary: isRTL
-                ? 'تنفيذ منظومة إضاءة تجمع بين الفخامة والطابع الإسلامي الحديث في أهم فنادق المدينة.'
-                : 'A lighting system combining luxury and modern Islamic aesthetics completed for one of Madinah’s landmark hotels.',
-
-            date: isRTL ? 'أكتوبر 2025' : 'October 2025',
-
-            image: '/projects-page/Makarem/2t.jpg',
-
-            category: isRTL ? 'فنادق' : 'Hotels',
-
-            link: '/projects/Makarem'
+                ? 'الشركة بدأت أعمال تركيب النجف في موقع المتحف الأحمر بجدة التاريخية، ضمن الشراكة مع وزارة الثقافة لتطوير الإضاءة.'
+                : 'Hebat East has commenced the installation of chandeliers at the Red Museum in Historic Jeddah, as part of the strategic partnership with the Ministry of Culture for lighting development.',
+            date: isRTL ? 'نوفمبر 2025' : 'Nov 2025',
+            image: '/News/mrr.webp',
+            category: isRTL ? 'مشاريع' : 'Projects',
+            link: '/news/ritz-carlton'
         },
-
         {
             id: 4,
             title: isRTL
-                ? 'إتمام مشروع جامع الشيخ سعد بن محمد العجلان'
-                : 'Muhammad Al-Ajlan Mosque Project Completed',
-
+                ? 'إنجاز أعمال الإضاءة في فندق مكارم المدينة'
+                : 'Completion of Lighting Works at Makarem Al-Madina Hotel',
             summary: isRTL
-                ? 'تصميم وتصنيع وتركيب النجف الرئيسي والفوانيس الجانبية، مع توزيع الإضاءة بدقة لتكملة الطابع المعماري للمسجد.'
-                : 'Design, manufacturing, and installation of the main chandelier and side wall lanterns, with precise lighting distribution to complement the mosque’s architectural style.',
-
-            date: isRTL ? 'اغسطس 2025' : 'August 2025',
-
-            image: '/projects-page/mosque4/6.jpeg',
-
-            category: isRTL ? 'مساجد' : 'Projects',
-
-            link: '/projects/mosque4'
+                ? 'تنفيذ منظومة إضاءة تجمع بين الفخامة والطابع الإسلامي الحديث في أهم فنادق المدينة.'
+                : 'A lighting system combining luxury and modern Islamic aesthetics completed for one of Madinah landmark hotels.',
+            date: isRTL ? 'أكتوبر 2025' : 'October 2025',
+            image: '/projects-page/Makarem/2t.jpg',
+            category: isRTL ? 'فنادق' : 'Hotels',
+            link: '/projects/Makarem'
         },
-
         {
             id: 5,
+            title: isRTL
+                ? 'إتمام مشروع جامع الشيخ سعد بن محمد العجلان'
+                : 'Muhammad Al-Ajlan Mosque Project Completed',
+            summary: isRTL
+                ? 'تصميم وتصنيع وتركيب النجف الرئيسي والفوانيس الجانبية، مع توزيع الإضاءة بدقة لتكملة الطابع المعماري للمسجد.'
+                : 'Design, manufacturing, and installation of the main chandelier and side wall lanterns, with precise lighting distribution to complement the mosque architectural style.',
+            date: isRTL ? 'اغسطس 2025' : 'August 2025',
+            image: '/projects-page/mosque4/6.jpeg',
+            category: isRTL ? 'مساجد' : 'Mosques',
+            link: '/projects/mosque4'
+        },
+        {
+            id: 6,
             title: isRTL
                 ? 'مشروع المتحف الأحمر بجدة التاريخية'
                 : 'Red Museum Project in Historic Jeddah',
@@ -100,9 +109,8 @@ const News = () => {
             category: isRTL ? 'مشاريع' : 'Projects',
             link: '/news/red-museum'
         },
-
         {
-            id: 6,
+            id: 7,
             title: isRTL
                 ? 'إتمام مشروع فندق ركيسوس'
                 : 'Rixos Hotel Project Completed',
@@ -115,25 +123,21 @@ const News = () => {
             link: '/projects/rixos'
         },
         {
-            id: 7,
+            id: 8,
             title: isRTL
                 ? 'إتمام مشروع إضاءة فندق WORTH'
                 : 'WORTH Hotel Lighting Project Completed',
-
             summary: isRTL
                 ? 'تنفيذ وتركيب أطول نجفة في المملكة بتصميم فاخر ومودرن، ضمن مشروع إضاءة متكاملة للفندق الذكي في المدينة المنورة.'
                 : 'Installation of the tallest chandelier in the Kingdom with luxury modern design, part of a comprehensive lighting project at the smart WORTH Hotel in Madinah.',
-
             date: isRTL ? 'نوفمبر 2024' : 'November 2024',
-
             image: '/projects-page/Worth/1.webp',
-
             category: isRTL ? 'فنادق' : 'Hotels',
-
             link: '/projects/commercial-plaza'
         }
-
     ];
+
+    const currentNews = newsItems[currentFeaturedIndex];
 
     return (
         <div className="min-h-screen bg-white overflow-x-hidden">
@@ -147,63 +151,121 @@ const News = () => {
                 </ScrollObserver>
             </div>
 
-            {/* Featured News - الخبر الرئيسي */}
+            {/* Featured News with Navigation Arrows */}
             <section className="pb-16 container-custom mx-auto">
                 <ScrollObserver animation="fade-up" threshold={0.2} delay={100}>
-                    <a href={newsItems[0].link} className="block group">
-                        <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700">
-                            {/* Background Image with Overlay */}
-                            <div className="relative h-[450px] md:h-[520px] lg:h-[550px]">
-                                <LazyImage
-                                    src={newsItems[0].image}
-                                    alt={newsItems[0].title}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent"></div>
+                    <div className="relative">
+                        {/* Navigation Arrows - Outside Image */}
+                        <button
+                            onClick={isRTL ? handleNext : handlePrevious}
+                            disabled={isTransitioning}
+                            className={`absolute top-1/2 -translate-y-1/2 ${isRTL ? 'right-0 -mr-16' : 'left-0 -ml-16'} z-20 bg-white hover:bg-gold text-charcoal hover:text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed group`}
+                            aria-label={isRTL ? "الخبر التالي" : "Previous news"}
+                        >
+                            {isRTL ? (
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+                            ) : (
+                                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" />
+                            )}
+                        </button>
 
-                                {/* Content Overlay */}
-                                <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
-                                    <div className="max-w-3xl">
-                                        {/* Category & Meta */}
-                                        <div className="flex items-center gap-3 mb-4 flex-wrap">
-                                            <span className="bg-gold text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">
-                                                {newsItems[0].category}
-                                            </span>
-                                            <div className="flex items-center gap-2 text-white/80">
-                                                <Calendar className="w-3.5 h-3.5" />
-                                                <span className="text-xs font-medium">{newsItems[0].date}</span>
+                        <button
+                            onClick={isRTL ? handlePrevious : handleNext}
+                            disabled={isTransitioning}
+                            className={`absolute top-1/2 -translate-y-1/2 ${isRTL ? 'left-0 -ml-16' : 'right-0 -mr-16'} z-20 bg-white hover:bg-gold text-charcoal hover:text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed group`}
+                            aria-label={isRTL ? "الخبر السابق" : "Next news"}
+                        >
+                            {isRTL ? (
+                                <ArrowLeft className="w-5 h-5 group-hover:-translate-x-0.5 transition-transform" />
+                            ) : (
+                                <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+                            )}
+                        </button>
+
+                        {/* Featured News Card with Smooth Transition */}
+                        <a href={currentNews.link} className="block group">
+                            <div className="relative rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700">
+                                {/* Background Image with Overlay */}
+                                <div className="relative h-[450px] md:h-[520px] lg:h-[550px]">
+                                    <div
+                                        key={currentFeaturedIndex}
+                                        className={`absolute inset-0 transition-opacity duration-700 ${isTransitioning ? 'opacity-0' : 'opacity-100'
+                                            }`}
+                                    >
+                                        <LazyImage
+                                            src={currentNews.image}
+                                            alt={currentNews.title}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent"></div>
+                                    </div>
+
+                                    {/* Content Overlay */}
+                                    <div className={`absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12 transition-opacity duration-700 ${isTransitioning ? 'opacity-0' : 'opacity-100'
+                                        }`}>
+                                        <div className="max-w-3xl">
+                                            {/* Category & Meta */}
+                                            <div className="flex items-center gap-3 mb-4 flex-wrap">
+                                                <span className="bg-gold text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide">
+                                                    {currentNews.category}
+                                                </span>
+                                                <div className="flex items-center gap-2 text-white/80">
+                                                    <Calendar className="w-3.5 h-3.5" />
+                                                    <span className="text-xs font-medium">{currentNews.date}</span>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        {/* Title */}
-                                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight group-hover:text-gold transition-colors duration-300">
-                                            {newsItems[0].title}
-                                        </h2>
+                                            {/* Title */}
+                                            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3 leading-tight group-hover:text-gold transition-colors duration-300">
+                                                {currentNews.title}
+                                            </h2>
 
-                                        {/* Summary */}
-                                        <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">
-                                            {newsItems[0].summary}
-                                        </p>
+                                            {/* Summary */}
+                                            <p className="text-base md:text-lg text-white/90 mb-6 leading-relaxed">
+                                                {currentNews.summary}
+                                            </p>
 
-                                        {/* Read More Button */}
-                                        <div className="inline-flex items-center gap-2 bg-white text-charcoal px-6 py-3 rounded-full font-bold text-sm hover:bg-gold hover:text-white transition-all duration-300 group-hover:gap-4">
-                                            <span>{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
-                                            {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+                                            {/* Read More Button */}
+                                            <div className="inline-flex items-center gap-2 bg-white text-charcoal px-6 py-3 rounded-full font-bold text-sm hover:bg-gold hover:text-white transition-all duration-300 group-hover:gap-4">
+                                                <span>{isRTL ? 'اقرأ المزيد' : 'Read More'}</span>
+                                                {isRTL ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                        </a>
+
+                        {/* Pagination Dots - Responsive & Animated */}
+                        <div className="flex justify-center gap-1.5 md:gap-2 mt-6">
+                            {newsItems.map((_, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => {
+                                        if (!isTransitioning && index !== currentFeaturedIndex) {
+                                            setIsTransitioning(true);
+                                            setCurrentFeaturedIndex(index);
+                                            setTimeout(() => setIsTransitioning(false), 700);
+                                        }
+                                    }}
+                                    className={`transition-all duration-500 ease-out rounded-full transform ${index === currentFeaturedIndex
+                                        ? 'w-6 md:w-8 h-1.5 md:h-2 bg-gold scale-100 shadow-md shadow-gold/30'
+                                        : 'w-1.5 md:w-2 h-1.5 md:h-2 bg-charcoal/25 hover:bg-gold/60 hover:scale-125 scale-100'
+                                        }`}
+                                    aria-label={`Go to news ${index + 1}`}
+                                />
+                            ))}
                         </div>
-                    </a>
+                    </div>
                 </ScrollObserver>
             </section>
 
             {/* Other News - باقي الأخبار */}
-            <section className="py-16 bg-gradient-to-b from-white via-gray-50 to-white">
+            <section className="py-16 bg-gradient-to-b from-white via-cream to-white">
                 <div className="container-custom mx-auto">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {newsItems.slice(1).map((news, index) => (
+                        {newsItems.filter((_, index) => index !== currentFeaturedIndex).map((news, index) => (
                             <ScrollObserver
                                 key={news.id}
                                 animation="fade-up"
@@ -240,15 +302,15 @@ const News = () => {
                                         {/* Content */}
                                         <CardContent className={`p-7 ${isRTL ? 'text-right' : 'text-left'} bg-white relative`}>
                                             {/* Date Only */}
-                                            <div className="flex items-center gap-2 mb-4 text-xs text-gray-500">
+                                            <div className="flex items-center gap-2 mb-4 text-xs text-charcoal/60">
                                                 <Calendar className="w-3.5 h-3.5" />
                                                 <span>{news.date}</span>
                                             </div>
 
-                                            <h3 className="text-lg font-bold text-gold/95 text-charcoal mb-3 leading-snug line-clamp-2">
+                                            <h3 className="text-lg font-bold text-charcoal mb-3 leading-snug line-clamp-2 group-hover:text-gold transition-colors duration-300">
                                                 {news.title}
                                             </h3>
-                                            <p className="text-base text-charcoal leading-relaxed mb-5 line-clamp-3 min-h-[4.5rem] font-medium">
+                                            <p className="text-base text-charcoal/80 leading-relaxed mb-5 line-clamp-3 min-h-[4.5rem]">
                                                 {news.summary}
                                             </p>
 
@@ -333,7 +395,7 @@ const News = () => {
                                 </div>
                             </div>
 
-                            {/* Image Grid (unchanged 100%) */}
+                            {/* Image Grid */}
                             <div className={`${isRTL ? 'lg:order-1' : 'lg:order-2'}`}>
                                 <div className="grid grid-cols-2 gap-5">
                                     <div className="space-y-5">
