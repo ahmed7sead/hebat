@@ -196,12 +196,7 @@ export default function getSimpleProjectsData(isRTL: boolean): SimpleProjectsDat
             ],
 
 
-            pdfs: [
-                {
-                    label: isRTL ? 'تحميل كتيب المشروعات الكتالوج الاسلامي (PDF)' : 'Download Islamic Catalog Projects (PDF)',
-                    url: '/projects-page/muslim/hebat-east-m.pdf'
-                }
-            ]
+
         },
 
         project2: {
@@ -327,13 +322,7 @@ export default function getSimpleProjectsData(isRTL: boolean): SimpleProjectsDat
 
             ],
 
-            pdfs: [
-                {
-                    label: isRTL ? 'تحميل كتالوج النجف و بعض منتجات مصنعنا (PDF)' : 'Download our chandelier catalog and some of our factorys products (PDF)',
-                    url: '/projects-page/muslim/hebat-east-m.pdf'
-                },
 
-            ]
         },
 
         project3: {
@@ -387,12 +376,7 @@ export default function getSimpleProjectsData(isRTL: boolean): SimpleProjectsDat
                 }
             ],
 
-            pdfs: [
-                {
-                    label: isRTL ? 'تحميل كتيب المشروعات الكتالوج الاسلامي (PDF)' : 'Download Islamic Catalog Projects (PDF)',
-                    url: '/projects-page/muslim/hebat-east-m.pdf'
-                }
-            ]
+
 
         },
 
