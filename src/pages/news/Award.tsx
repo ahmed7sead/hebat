@@ -740,7 +740,7 @@ const Award: React.FC = () => {
                     >
                         <div dir="ltr">
                             <VideoPlayer
-                                src="/videos/h2.mp4"
+                                src="/News/finish/WhatsApp Video 2025-12-14 at 15.53.40.mp4"
                                 poster="/News/finish/preview.jpg"
                                 className="w-full h-64 md:h-80 lg:h-96 xl:h-[420px]"
                                 autoPlay={false}
