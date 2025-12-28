@@ -25,6 +25,7 @@ const RedMuseumNews = lazy(() => import("./pages/news/RedMuseum"));
 const RitzCarltonNews = lazy(() => import("./pages/news/RitzCarlton"));
 const MinistryNews = lazy(() => import("./pages/news/Ministry"));
 const AwardNews = lazy(() => import("./pages/news/Award"));
+const Moc = lazy(() => import("./pages/news/Moc"));
 
 const Gallery = lazy(() => import("./pages/Gallery"));
 const Testimonials = lazy(() => import("./pages/Testimonials"));
@@ -65,6 +66,7 @@ const MainContent = () => {
             element={<MinistryNews />}
           />
           <Route path="/news/excellence-award" element={<AwardNews />} />
+          <Route path="/news/moc" element={<Moc />} />
 
           {/* Projects */}
           <Route path="/projects" element={<Projects />} />

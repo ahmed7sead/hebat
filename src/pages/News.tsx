@@ -45,6 +45,19 @@ const News = () => {
             link: '/news/ministry-partnership'
         },
         {
+            id: 9,
+            title: isRTL
+                ? 'الانتهاء من مشروع مشروع مبني وزارة الثقافة بمحافظة الدرعية - الرياض'
+                : 'Completed the project to build the MOC in Diriyah Governorate - Riyadh',
+            summary: isRTL
+                ? 'اتمام لمشروع اضاءة مبني وزارة الثقافة الرئيسي.'
+                : 'Completion of the lighting project for the main Ministry of Culture building.',
+            date: isRTL ? 'يناير 2026' : 'Jan 2026',
+            image: '/News/moc/main.jpg',
+            category: isRTL ? 'مشاريع' : 'Projects',
+            link: '/news/moc'
+        },
+        {
             id: 2,
             title: isRTL
                 ? 'الانتهاء من مشروع متحف البحر الاحمر'
