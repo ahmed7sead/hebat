@@ -128,22 +128,7 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
           full: '/projects-page/mosque1/19.webp',
           thumbnail: '/projects-page/mosque1/thumbs/19.webp'
         },
-        {
-          full: '/projects-page/mosque1/20.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/20.webp'
-        },
-        {
-          full: '/projects-page/mosque1/21.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/21.webp'
-        },
-        {
-          full: '/projects-page/mosque1/22.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/22.webp'
-        },
-        {
-          full: '/projects-page/mosque1/23.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/23.webp'
-        }
+      
       ],
 
       details: [
@@ -293,9 +278,6 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
         { full: '/projects-page/Makarem/16t.webp', thumbnail: '/projects-page/Makarem/thumbs/16t.webp' },
         { full: '/projects-page/Makarem/16t.jpg', thumbnail: '/projects-page/Makarem/thumbs/16t.jpg' },
         { full: '/projects-page/Makarem/15t.jpg', thumbnail: '/projects-page/Makarem/thumbs/15t.jpg' },
-        { full: '/projects-page/Makarem/17.jpeg', thumbnail: '/projects-page/Makarem/thumbs/17.jpeg' },
-        { full: '/projects-page/Makarem/18.jpeg', thumbnail: '/projects-page/Makarem/thumbs/18.jpeg' },
-        { full: '/projects-page/Makarem/17t.jfif', thumbnail: '/projects-page/Makarem/thumbs/17t.jfif' },
         { full: '/projects-page/Makarem/19.jpeg', thumbnail: '/projects-page/Makarem/thumbs/19.jpeg' },
         { full: '/projects-page/Makarem/19t.webp', thumbnail: '/projects-page/Makarem/thumbs/19t.webp' },
         { full: '/projects-page/Makarem/20t.webp', thumbnail: '/projects-page/Makarem/thumbs/20t.webp' },
