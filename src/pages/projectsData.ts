@@ -43,14 +43,14 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
 
   const projectsData: Record<string, ProjectType> = {
     'mosque1': {
-      title: isRTL ? 'مسجد الشربتلي' : 'Sharbatly Mosque',
+      title: isRTL ? 'مسجد الشلوب' : 'Al-Shalhoub Mosque',
       subtitle: isRTL ? 'جدة، المملكة العربية السعودية' : 'Jeddah, KSA',
       description: isRTL
-        ? 'مشروع إضاءة لمسجد الشربتلي في جدة شامل الديكورات وتركيب الهلال وإنارة المسجد وتركيب عدد 6 نجفات كلاسيكية إسلامية فاخرة.'
-        : 'Al-Sharbatly Mosque lighting project, including decorations, installation of the crescent, illumination of the mosque, and installation of 6 chandeliers.',
+        ? 'مشروع إضاءة لمسجد الشلهوب في جدة شامل الديكورات وتركيب الهلال وإنارة المسجد وتركيب عدد 6 نجفات كلاسيكية إسلامية فاخرة.'
+        : 'Al-Al-Shalhoub Mosque lighting project, including decorations, installation of the crescent, illumination of the mosque, and installation of 6 chandeliers.',
       year: '2024',
       category: isRTL ? 'مساجد' : 'Mosque',
-      client: isRTL ? 'مؤسسة حسن الشربتلي الخيرية' : 'Al-Sharbelti Charitable Foundation',
+      client: isRTL ? ' الشلهوب الخيرية' : 'Al-Al-Shalhoub Charitable Foundation',
       location: isRTL ? 'جدة، المملكة العربية السعودية' : 'Jeddah, KSA',
       mainImage: '/projects-page/mosque1/23.webp',
 
@@ -92,10 +92,7 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
           thumbnail: '/projects-page/mosque1/thumbs/9.webp'
         },
 
-        {
-          full: '/projects-page/mosque1/11.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/11.webp'
-        },
+        
         {
           full: '/projects-page/mosque1/12.webp',
           thumbnail: '/projects-page/mosque1/thumbs/12.webp'
@@ -105,29 +102,10 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
           thumbnail: '/projects-page/mosque1/thumbs/13.webp'
         },
         {
-          full: '/projects-page/mosque1/14.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/14.webp'
-        },
-        {
-          full: '/projects-page/mosque1/15.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/15.webp'
-        },
-        {
-          full: '/projects-page/mosque1/16.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/16.webp'
-        },
-        {
           full: '/projects-page/mosque1/17.webp',
           thumbnail: '/projects-page/mosque1/thumbs/17.webp'
         },
-        {
-          full: '/projects-page/mosque1/18.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/18.webp'
-        },
-        {
-          full: '/projects-page/mosque1/19.webp',
-          thumbnail: '/projects-page/mosque1/thumbs/19.webp'
-        },
+       
       
       ],
 
@@ -280,7 +258,6 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
         { full: '/projects-page/Makarem/15t.jpg', thumbnail: '/projects-page/Makarem/thumbs/15t.jpg' },
         { full: '/projects-page/Makarem/19.jpeg', thumbnail: '/projects-page/Makarem/thumbs/19.jpeg' },
         { full: '/projects-page/Makarem/19t.webp', thumbnail: '/projects-page/Makarem/thumbs/19t.webp' },
-        { full: '/projects-page/Makarem/20t.webp', thumbnail: '/projects-page/Makarem/thumbs/20t.webp' },
 
       ],
       details: [
@@ -410,10 +387,7 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
           full: '/projects-page/mosque3/3.webp',
           thumbnail: '/projects-page/mosque3/thumbs/3.webp'
         },
-        {
-          full: '/projects-page/mosque3/4.webp',
-          thumbnail: '/projects-page/mosque3/thumbs/4.webp'
-        },
+
         {
           full: '/projects-page/mosque3/5.webp',
           thumbnail: '/projects-page/mosque3/thumbs/5.webp'
@@ -448,25 +422,15 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
           full: '/projects-page/mosque3/14.webp',
           thumbnail: '/projects-page/mosque3/thumbs/14.webp'
         },
-        {
-          full: '/projects-page/mosque3/15.webp',
-          thumbnail: '/projects-page/mosque3/thumbs/15.webp'
-        },
+
         {
           full: '/projects-page/mosque3/16.webp',
           thumbnail: '/projects-page/mosque3/thumbs/16.webp'
         },
-        {
-          full: '/projects-page/mosque3/17.webp',
-          thumbnail: '/projects-page/mosque3/thumbs/17.webp'
-        },
+        
         {
           full: '/projects-page/mosque3/18.webp',
           thumbnail: '/projects-page/mosque3/thumbs/18.webp'
-        },
-        {
-          full: '/projects-page/mosque3/19.webp',
-          thumbnail: '/projects-page/mosque3/thumbs/19.webp'
         },
         {
           full: '/projects-page/mosque3/20.webp',

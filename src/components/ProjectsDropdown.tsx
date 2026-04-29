@@ -105,7 +105,7 @@ export const ProjectsDropdown: React.FC<ProjectsDropdownProps> = ({ triggerRef }
                 },
                 {
                     id: 'mosque1',
-                    title: isRTL ? 'مسجد الشربتلي' : 'Al-Sharbalti Mosque',
+                    title: isRTL ? 'مسجد الشلهوب' : 'Al-Al-Shalhoub Mosque',
                     path: '/projects/mosque1',
                     icon: Home,
                 },

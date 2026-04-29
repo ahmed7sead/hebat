@@ -301,69 +301,6 @@ const Ministry: React.FC = () => {
                 </div>
             </ScrollObserver>
 
-            {/* Section 2 */}
-            <section ref={setSectionRef(1)} className="py-20 opacity-0 transform translate-y-10">
-                <div className="container-custom mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-                    {/* Left Image */}
-                    <div className={`${isRTL ? 'lg:order-2' : 'lg:order-1'}`}>
-                        <div className="relative rounded-3xl overflow-hidden shadow-2xl group">
-                            <img
-                                src="/projects-page/mosque5/12.jpeg" alt="Technical Meeting"
-                                className="w-full h-96 lg:h-[500px] object-cover transform group-hover:scale-105 transition-all duration-700 ease-out"
-                                style={{
-                                    filter: 'brightness(1.02) contrast(1.05)',
-                                    transition: 'all 0.7s cubic-bezier(0.4, 0, 0.2, 1)'
-                                }}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-charcoal/10 to-transparent group-hover:from-charcoal/5 transition-all duration-500"></div>
-                        </div>
-                    </div>
-
-                    {/* Right Text */}
-                    <div className={`${isRTL ? 'lg:order-1' : 'lg:order-2'} relative`}>
-                        <div className="relative bg-gradient-to-bl from-charcoal/5 to-charcoal/10 p-8 lg:p-16 rounded-3xl group hover:shadow-lg transition-all duration-500"
-                            style={{
-                                clipPath: 'polygon(10% 0%, 100% 0%, 100% 100%, 0% 85%)',
-                                transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)'
-                            }}>
-
-                            {/* Title */}
-                            <h2 className="text-3xl lg:text-4xl font-bold text-charcoal mb-6 group-hover:text-charcoal/90 transition-colors duration-300">
-                                {isRTL ? 'الإضاءات الجانبية – Side Lighting Features' : 'Side Lighting Features'}
-                            </h2>
-
-                            {/* Paragraph */}
-                            <p className="text-lg text-charcoal/80 leading-relaxed mb-6 group-hover:text-charcoal/90 transition-colors duration-300">
-                                {isRTL
-                                    ? 'واشتمل المشروع أيضًا على تنفيذ مجموعة من الفوانيس الجدارية والإضاءات الجانبية المصممة خصيصًا لتتناسب مع الهوية المعمارية للمسجد:'
-                                    : 'The project also included custom wall lanterns and side lighting fixtures designed to match the mosque’s :'}
-                            </p>
-
-                            {/* Bullet Points */}
-                            <ul className="space-y-3">
-                                {(isRTL
-                                    ? [
-                                        'إضاءة مريحة للعين',
-                                        'خامة معدنية معالجة ضد الحرارة والرطوبة',
-                                    ]
-                                    : [
-                                        'Soft, eye-comfortable illumination',
-                                        'Modern geometric glass patterns inspired by Islamic design'
-                                    ]
-                                ).map((item, i) => (
-                                    <li key={i} className="flex items-start gap-3">
-                                        <span className="w-3 h-3 rounded-full bg-gold mt-2"></span>
-                                        <span className="text-charcoal/80 text-lg leading-relaxed">{item}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                        </div>
-                    </div>
-
-                </div>
-            </section>
 
             {/* Section 3 */}
             <section ref={setSectionRef(2)} className="py-20 opacity-0 transform translate-y-10">

@@ -61,7 +61,7 @@ const News = () => {
             id: 2,
             title: isRTL
                 ? 'الانتهاء من مشروع متحف البحر الاحمر'
-                : 'Rixos Hotel Project Completed',
+                : 'Red Museum Project Completed',
             summary: isRTL
                 ? 'اتمام التنفيذ والتركيبات لمشروع اضاءة متحف البحر الاحمر في وقت قياسي.'
                 : 'Completion of the implementation and installation of the Red Sea Museum lighting project in record time.',

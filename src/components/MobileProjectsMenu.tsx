@@ -57,7 +57,7 @@ export const MobileProjectsMenu: React.FC<MobileProjectsMenuProps> = ({ setSheet
                 },
                 {
                     id: 'mosque1',
-                    title: isRTL ? 'مسجد الشربتلي' : 'Al-Sharbalti Mosque',
+                    title: isRTL ? 'مسجد الشلهوب' : 'Al-Al-Shalhoub Mosque',
                     path: '/projects/mosque1',
                 },
                 {
