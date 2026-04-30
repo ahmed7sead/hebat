@@ -138,7 +138,7 @@ const NewsPopup = () => {
                 </div>
 
                 <h3 className="font-semibold text-charcoal text-base relative">
-                  {isRTL ? 'إنجاز جديد' : 'Major Achievement'}
+                  {isRTL ? 'تسليم مشروع جديد' : 'New project delivery'}
                 </h3>
               </div>
 
@@ -161,10 +161,10 @@ const NewsPopup = () => {
                     Ensures user goes to top of news page on click
                     Mobile Optimized Height
                     ===================================================== */}
-                <Link to="/news/excellence-award" onClick={handleNewsClick}>
+                <Link to="/news/Makarem" onClick={handleNewsClick}>
                   <div className="relative overflow-hidden rounded-xl group cursor-pointer mt-1 mb-4">
                     <img
-                      src="News/finish/poster-after.jpg"
+                      src="News/makarem/2t.jpg"
                       alt="Latest News"
                       className="w-full h-40 sm:h-40 object-cover transition-transform duration-500 group-hover:scale-105"
                     />
@@ -188,8 +188,8 @@ const NewsPopup = () => {
                   ${isRTL ? 'text-right font-tajawal' : 'text-left font-playfair'}
                 `}>
                   {isRTL
-                    ? 'إنجاز استثنائي: متحف البحر الأحمر بحلة جديدة!'
-                    : 'Record Achievement: Red Sea Museum Transformed!'
+                    ? 'إنجاز استثنائي: فندق مكارم مدينة بالمدينة المنورة!'
+                    : 'Outstanding Achievement: Makarim Madina Hotel in MADINA!'
                   }
                 </h4>
 
@@ -199,8 +199,8 @@ const NewsPopup = () => {
                   ${isRTL ? 'text-right font-tajawal' : 'text-left'}
                 `}>
                   {isRTL
-                    ? 'أنجزنا مشروع إضاءة متحف البحر الأحمر في زمن قياسي! تصميم مبتكر وتنفيذ احترافي حوّل المتحف لتحفة فنية مضيئة تليق بعراقته...'
-                    : 'We completed the Red Sea Museum lighting project in record time! Innovative design and professional execution transformed the museum into a luminous masterpiece...'
+                    ? 'أنجزنا كافة أعمال المعادن والإضاءة وتركيب النجف الفاخرة في فندق مكارم مدينة! تنفيذ احترافي بأعلى معايير الجودة والدقة...'
+                    : 'We completed all metal works, lighting and luxury chandelier installations at Makarim Madina Hotel! Professional execution with the highest standards of quality and precision...'
                   }
                 </p>
 
@@ -208,7 +208,7 @@ const NewsPopup = () => {
                     "Read More" Button - Navigates user to news page
                     Includes auto-scroll to top functionality
                     ===================================================== */}
-                <Link to="/news/red-museum" onClick={handleNewsClick}>
+                <Link to="/news/makarim-hotel" onClick={handleNewsClick}>
                   <Button
                     className={`
                       w-full bg-gradient-to-r from-gold to-gold-dark hover:from-gold-dark hover:to-gold 
@@ -221,7 +221,7 @@ const NewsPopup = () => {
                     {/* Button shine effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
 
-                    <span className="relative z-10">{isRTL ? 'شاهد الإنجاز' : 'View Achievement'}</span>
+                    <span className="relative z-10">{isRTL ? 'شاهد المشروع' : 'See details'}</span>
                     <ExternalLink className={`w-4 h-4 ${isRTL ? 'mr-2' : 'ml-2'} relative z-10 transition-transform duration-300 group-hover:translate-x-1`} />
                   </Button>
                 </Link>

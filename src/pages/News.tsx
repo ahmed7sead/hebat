@@ -30,8 +30,19 @@ const News = () => {
     };
 
     // بيانات الأخبار مع المسارات الصحيحة
-    const newsItems = [
-        {
+    const newsItems = [{
+id: 10,
+            title: isRTL
+                ? 'إتمام أعمال الإضاءة الفندقية في فندق مكارم مدينة بالمدينة المنورة'
+                : 'Completion of Hotel Lighting Works at Makarem Madinah Hotel in Madinah',
+            summary: isRTL
+                ? 'أنجزت شركة هبات الشرق أعمال الإضاءة الفندقية الفاخرة في فندق مكارم مدينة بالمدينة المنورة، بالتزام تام بأعلى معايير الجودة والدقة عبر أروقة الفندق وصالاته الرئيسية.'
+                : 'Hebat East successfully completed the luxury hotel lighting installation at Makarem Madinah Hotel in Madinah, delivering precise workmanship across the hotel\'s corridors and main halls.',
+            date: isRTL ? 'يناير 2026' : 'January 2026',
+            image: '/News/makarem/hero.png',
+            category: isRTL ? 'مشاريع فندقية' : 'Hotel Projects',
+            link: '/news/Makarem'
+        },        {
             id: 1,
             title: isRTL
                 ? 'تحفة ضوئية معمارية في مسجد ضحايا سديم'

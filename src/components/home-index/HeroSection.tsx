@@ -32,6 +32,24 @@ const HeroSection: React.FC = () => {
 
   // Carousel slides data
   const slides: CarouselSlide[] = [
+
+     {
+      id: 4,
+      image: 'News/makarem/hero.png',
+      title: {
+        ar: 'فندق مكارم مدينة',
+        en: 'Makarem Al Madinah Hotel'
+      },
+      description: {
+        ar: 'مشروع تصميم وتصنيع وتركيب معادن واضاءة  فندق مكارم بالمدينة المنورة',
+        en: 'Design, manufacturing, and installation of metals and lighting for the Makarem Hotel in Madinah'
+      },
+      projectLink: '/projects/Makarem',
+      projectName: {
+        ar: ' المشروع',
+        en: ' project'
+      }
+    },
     {
       id: 1,
       image: '/Logo_and_identity/hero-worth.webp',
@@ -83,6 +101,7 @@ const HeroSection: React.FC = () => {
         en: ' project'
       }
     }
+   
   ];
 
   useEffect(() => {
