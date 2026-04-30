@@ -208,7 +208,7 @@ const NewsPopup = () => {
                     "Read More" Button - Navigates user to news page
                     Includes auto-scroll to top functionality
                     ===================================================== */}
-                <Link to="/news/makarim-hotel" onClick={handleNewsClick}>
+                <Link to="/news/Makarem" onClick={handleNewsClick}>
                   <Button
                     className={`
                       w-full bg-gradient-to-r from-gold to-gold-dark hover:from-gold-dark hover:to-gold 
