@@ -31,8 +31,8 @@ const Footer: React.FC = () => {
 
           <p className="text-base text-white">
             {isRTL
-              ? 'مجموعة هبات الشرق هي شركة سعودية رائدة في انظمة الانارة الديكورية وانارة الواجهات المعمارية  الفاخرة.'
-              : 'HEBAT EAST GROUP is a leading Saudi company specialized in decorative lighting systems and luxury building fronts lighting.'}
+              ? 'مجموعة هبات الشرق هي شركة  رائدة في انظمة الانارة الديكورية وانارة الواجهات المعمارية  الفاخرة.'
+              : 'HEBAT EAST GROUP is a leading  company specialized in decorative lighting systems and luxury building fronts lighting.'}
           </p>
         </div>
 
@@ -86,6 +86,11 @@ const Footer: React.FC = () => {
               <Phone size={18} className="text-gold" />
               <span>00966580076800</span>
             </div>
+                        <div className="flex items-start gap-3">
+              <Phone size={18} className="text-gold" />
+              <span>01559893354</span>
+            </div>
+
             <div className="flex items-start gap-3">
               <Mail size={18} className="text-gold" />
               <span>info@hebateast.com</span>
