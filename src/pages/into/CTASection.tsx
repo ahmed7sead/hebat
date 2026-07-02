@@ -25,7 +25,7 @@ const CTASection = () => {
               <div className="hidden md:block absolute -top-3 -left-3 w-6 h-6 border border-white/20 rounded-full"></div>
 
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight px-2 md:px-0">
-                {isRTL ? "هل لديك مشروع في الذهن؟" : "Have a Project in Mind?"}
+                {isRTL ? "هل لديك مشروع في ذهنك" : "Have a Project in Mind?"}
               </h2>
             </div>
 

@@ -26,6 +26,9 @@ const Footer: React.FC = () => {
               bg-gradient-to-r from-gold to-gold-light"></div>
 
           </div>
+
+          {/* Factory Address */}
+
           <p className="text-base text-white">
             {isRTL
               ? 'مجموعة هبات الشرق هي شركة سعودية رائدة في انظمة الانارة الديكورية وانارة الواجهات المعمارية  الفاخرة.'
@@ -70,6 +73,15 @@ const Footer: React.FC = () => {
                 {isRTL ? 'شارع الملك فيصل، جدة، السعودية' : 'King Faisal St, Jeddah, Saudi Arabia'}
               </span>
             </div>
+                      <div className="flex items-start gap-3 text-base text-white">
+            <MapPin size={18} className="text-gold mt-1 shrink-0" />
+            <span>
+              {isRTL
+                ? 'المصنع: القاهرة، بدر، المنطقة الصناعية الأولى، قطعة 155'
+                : 'Factory: Cairo, Badr, First Industrial Zone, Plot 155'}
+            </span>
+          </div>
+
             <div className="flex items-start gap-3">
               <Phone size={18} className="text-gold" />
               <span>00966580076800</span>
