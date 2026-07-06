@@ -25,13 +25,63 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: isRTL ? 'م/اشرف قنديل' : 'Eng / Ashraf kandil',
-      role: isRTL ? 'المدير التنفيذي' : 'CEO & Founder',
+      name: isRTL ? 'م/اشرف عبدالعزيز' : 'Eng / Ashraf Abd elaziz ',
+      role: isRTL ? ' المدير التنفيذي ومدير المشروعات' : 'CEO & project manager',
       bio: isRTL
-        ? 'خبرة 20 عامًا في مجال الإضاءة الفاخرة والتركيب الداخلي. وادارة المشروعات الضخمة'
-        : '20 years of experience in luxury lighting and interior design.',
+        ? 'خبرة 25 عامًا في مجال الإضاءة الفاخرة والتركيب الداخلي. وادارة المشروعات الضخمة'
+        : '25 years of experience in luxury lighting and interior design.',
       image: "/News/profile.webp"
     },
+
+    {
+      name: isRTL ? 'م/محمد اشرف' : 'Eng / Mohamed Ashraf',
+      role: isRTL ? 'نائب  مديرالمشروعات' : 'Deputy Project Manager',
+      bio: isRTL
+        ? 'مسئول تنسيق ومتابعة سير المشروعات، والتواصل بين فرق العمل، والحرص على تنفيذ الأعمال وفق الخطط والجداول الزمنية المحددة'
+        : 'Responsible for coordinating and monitoring project progress, facilitating communication between teams, and ensuring work is executed according to established plans and schedules..',
+      image: "/team/4.jpeg"
+    },
+
+     {
+      name: isRTL ? 'م/محمد متولي' : 'Eng / Mohamed Ashraf',
+      role: isRTL ? 'مدير المكتب الفني' : 'Deputy Project Manager',
+      bio: isRTL
+        ? '   يمتلك خبرة تزيد عن 20 عامًا في التصميم الهندسي وإعداد الرسومات التنفيذية باستخدام AutoCAD، مع خبرة في مراجعة المخططات الفنية، وتنسيق الأعمال الهندسية، وضمان دقة التصميمات ومطابقتها لمتطلبات المشروع.'
+        : 'Over 20 years of experience in engineering design and AutoCAD drafting, with extensive expertise in reviewing technical drawings, coordinating engineering works, and ensuring design accuracy and compliance with project requirements...',
+      image: "/team/5.png"
+    },
+
+{
+      name: isRTL ? 'م/ إبراهيم محمد السيد' : 'Eng. Ibrahim Muhammad Al-Sayed',
+      role: isRTL ? 'مهندس مبيعات' : 'Sales Engineer',
+      bio: isRTL
+        ? 'متخصص في تقديم الحلول الفنية للعملاء، وتحليل احتياجات المشاريع، وضمان توافق المنتجات مع المتطلبات.'
+        : 'Specialized in providing technical solutions to clients, analyzing project needs, and ensuring product compatibility.',
+      image: "/team/Ibrahim.webp"
+    },
+{
+  name: isRTL ? 'م/ أدهم مصطفى' : 'Eng. Adham Mostafa',
+  role: isRTL
+    ? 'مهندس مشروعات تركيب الإضاءة والثريات والنجف'
+    : 'Lighting, Chandeliers & Decorative Fixtures Installation Project Engineer',
+  bio: isRTL
+    ? 'يمتلك خبرة تمتد إلى 5 سنوات في إدارة وتنفيذ مشروعات تركيب الإضاءة والثريات والنجف والإشراف على التنفيذ، وضمان الالتزام بالمخططات الفنية، ومعايير الجودة، والجداول الزمنية للمشروعات.'
+    : '5 years of experience in managing and executing lighting, chandelier, and decorative fixture installation projects, supervising on-site execution, ensuring compliance with technical drawings, quality standards.',
+  image: "/team/ad.png"
+},
+
+
+       {
+ name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'EngAbdulrahman Ismail',
+  role: isRTL
+    ? 'مهندس أوتوكاد في تصميم الثريا - خبرة 5 سنوات'
+    : 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
+  bio: isRTL
+    ? 'متخصص في تصميم الثريات باستخدام برنامج أوتوكاد، مع خبرة تمتد إلى 5 سنوات في إعداد الرسومات التنفيذية والتفصيلية بدقة عالية وتحويل الأفكار إلى تصاميم احترافية قابلة للتنفيذ.'
+    : 'Specialized in chandelier design using AutoCAD, with 5 years of experience creating detailed technical drawings, production-ready designs, and precise drafting solutions.',
+  image: "/team/abd.png" // غيّر المسار حسب الصورة الفعلية
+},
+
     {
       name: isRTL ? 'م/ هانيا هشام' : 'Hania Hesham',
       role: isRTL ? 'مهندسة معمارية ومصممة داخلية' : 'Architect & Interior Designer',
@@ -49,14 +99,8 @@ const About = () => {
       image: "/team/sherif.JPG" // غير المسار حسب الصورة الحقيقية
     },
 
-    {
-      name: isRTL ? 'م/ إبراهيم محمد السيد' : 'Eng. Ibrahim Muhammad Al-Sayed',
-      role: isRTL ? 'مهندس مبيعات' : 'Sales Engineer',
-      bio: isRTL
-        ? 'متخصص في تقديم الحلول الفنية للعملاء، وتحليل احتياجات المشاريع، وضمان توافق المنتجات مع المتطلبات.'
-        : 'Specialized in providing technical solutions to clients, analyzing project needs, and ensuring product compatibility.',
-      image: "/team/Ibrahim.webp"
-    },
+
+    
     {
       name: isRTL ? 'م/خالد الراشد' : 'Eng / Khalid Al-Rashid',
       role: isRTL ? 'مدير التركيب' : 'Installation Manager',
@@ -64,14 +108,10 @@ const About = () => {
         ? 'خبير تقني بخبرة 15 عامًا في تركيب الإضاءة الفاخرة.'
         : 'Technical expert with 15 years of experience in luxury lighting installation.',
       image: "/team/happy-confident-young-attractive-arabic-260nw-2107625390.jpg"
-    }, {
-      name: isRTL ? 'م/ محمود عبد التواب' : 'Eng. Mahmoud Abdeltawab',
-      role: isRTL ? 'مدير الإنتاج' : 'Production Manager',
-      bio: isRTL
-        ? 'مسؤول عن إدارة عمليات التصنيع، اختيار الخامات، وضمان جودة المنتجات من التصميم للتنفيذ.'
-        : 'Responsible for managing production operations, material selection, and ensuring product quality from design to execution.',
-      image: "/team/m.webp"
-    }
+    },
+    
+    
+    
 
   ];
 

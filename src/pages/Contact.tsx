@@ -34,49 +34,66 @@ const Contact = () => {
           className="bg-white/95 shadow-xl elegant-shadow border border-gold-light rounded-3xl p-8 flex flex-col justify-between gap-12 animate-fade-in"
           style={{ backdropFilter: "blur(6px)" }}>
           <div className="flex flex-col gap-8">
-            {/* Address */}
+            {/* Saudi Office Address */}
             <div className="flex items-start gap-5">
               <span className="p-2 rounded-full bg-gold-light shadow">
                 <MapPin size={26} className="text-gold" />
               </span>
               <div className={`${isRTL ? "text-right" : "text-left"}`}>
                 <span className="block text-base font-bold mb-1 text-gold">
-                  {isRTL ? "العنوان" : "Address"}
+                  {isRTL ? "المقر الرئيسي - السعودية" : "Saudi Head Office"}
                 </span>
                 <span className="text-charcoal-light">
                   {isRTL
-                    ? "شارع الملك فيصل، جدة، المملكة العربية السعودية"
-                    : "King Faisal Street, Jeddah, Saudi Arabia"}
+                    ? "المقر الرئيسي للخليج: مكتب 401، بلازا العزيزية، شارع التحلية، جدة — المملكة العربية السعودية"
+                    : "Gulf Head Office: Office 401, Al Aziriah Plaza, Tahlia Street, Jeddah, Saudi Arabia"}
                 </span>
               </div>
             </div>
 
-            {/* Sales Phone */}
+            {/* Egypt Factory Address */}
+            <div className="flex items-start gap-5">
+              <span className="p-2 rounded-full bg-gold-light shadow">
+                <MapPin size={26} className="text-gold" />
+              </span>
+              <div className={`${isRTL ? "text-right" : "text-left"}`}>
+                <span className="block text-base font-bold mb-1 text-gold">
+                  {isRTL ? "مصنع مصر" : "Egypt Factory"}
+                </span>
+                <span className="text-charcoal-light">
+                  {isRTL
+                    ? "قطعة 155، المنطقة الصناعية الأولى، مدينة بدر، القاهرة"
+                    : "Plot 155, First Industrial Zone, Badr City, Cairo — Egypt"}
+                </span>
+              </div>
+            </div>
+
+            {/* Saudi / UAE Phone */}
             <div className="flex items-start gap-5">
               <span className="p-2 rounded-full bg-gold-light shadow">
                 <Phone size={22} className="text-gold" />
               </span>
               <div className={`${isRTL ? "text-right" : "text-left"}`}>
                 <span className="block text-base font-bold mb-1 text-gold">
-                  {isRTL ? "المبيعات" : "Sales"}
+                  {isRTL ? "السعودية / الإمارات" : "Saudi Arabia / UAE"}
                 </span>
-                <a href="tel:+00966580076800" className="text-charcoal hover:text-gold transition font-medium">
-                  00966580076800
+                <a href="tel:+966561537147" className="text-charcoal hover:text-gold transition font-medium">
+                  +966 56 153 7147
                 </a>
               </div>
             </div>
 
-            {/* Support Phone */}
+            {/* Egypt Phone */}
             <div className="flex items-start gap-5">
               <span className="p-2 rounded-full bg-gold-light shadow">
                 <Phone size={22} className="text-gold" />
               </span>
               <div className={`${isRTL ? "text-right" : "text-left"}`}>
                 <span className="block text-base font-bold mb-1 text-gold">
-                  {isRTL ? "خدمة العملاء" : "Customer Service"}
+                  {isRTL ? "مصر" : "Egypt"}
                 </span>
-                <a href="tel:+00966580076800" className="text-charcoal hover:text-gold transition font-medium">
-                  00966580076800
+                <a href="tel:01559893354" className="text-charcoal hover:text-gold transition font-medium">
+                  01559893354
                 </a>
               </div>
             </div>
@@ -91,7 +108,7 @@ const Contact = () => {
                   {isRTL ? "استفسارات عامة" : "General Inquiries"}
                 </span>
                 <a href="mailto:info@hibateast.com" className="text-charcoal hover:text-gold transition font-medium">
-                  info@hibateast.com
+                  info@hebateast.com
                 </a>
               </div>
             </div>
@@ -106,7 +123,7 @@ const Contact = () => {
                   {isRTL ? "خدمة العملاء" : "Customer Support"}
                 </span>
                 <a href="mailto:support@hibateast.com" className="text-charcoal hover:text-gold transition font-medium">
-                  support@hibateast.com
+                  m.sales@hebateast.com
                 </a>
               </div>
             </div>
