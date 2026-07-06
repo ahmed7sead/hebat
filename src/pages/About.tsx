@@ -35,16 +35,16 @@ const About = () => {
 
     {
       name: isRTL ? 'م/محمد اشرف' : 'Eng / Mohamed Ashraf',
-      role: isRTL ? 'نائب  مديرالمشروعات' : 'Deputy Project Manager' ,
+      role: isRTL ? 'نائب  مديرالمشروعات' : 'Deputy Project Manager',
       bio: isRTL
         ? 'مسئول تنسيق ومتابعة سير المشروعات، والتواصل بين فرق العمل، والحرص على تنفيذ الأعمال وفق الخطط والجداول الزمنية المحددة'
         : 'Responsible for coordinating and monitoring project progress, facilitating communication between teams, and ensuring work is executed according to established plans and schedules..',
       image: "/team/4.jpeg"
     },
 
-     {
-      name: isRTL ? 'م/محمد متولي' : 'Eng / Mohamed Metwally
-',
+    {
+      name: isRTL ? 'م/محمد متولي' : 'Eng / Mohamed Metwally ',
+
       role: isRTL ? 'مدير المكتب الفني' : 'Technical Office Manager',
       bio: isRTL
         ? '   يمتلك خبرة تزيد عن 20 عامًا في التصميم الهندسي وإعداد الرسومات التنفيذية باستخدام AutoCAD، مع خبرة في مراجعة المخططات الفنية، وتنسيق الأعمال الهندسية، وضمان دقة التصميمات ومطابقتها لمتطلبات المشروع.'
@@ -52,7 +52,7 @@ const About = () => {
       image: "/team/5.png"
     },
 
-{
+    {
       name: isRTL ? 'م/ إبراهيم محمد السيد' : 'Eng. Ibrahim Muhammad Al-Sayed',
       role: isRTL ? 'مهندس مبيعات' : 'Sales Engineer',
       bio: isRTL
@@ -60,28 +60,28 @@ const About = () => {
         : 'Specialized in providing technical solutions to clients, analyzing project needs, and ensuring product compatibility.',
       image: "/team/Ibrahim.webp"
     },
-{
-  name: isRTL ? 'م/ أدهم مصطفى' : 'Eng. Adham Mostafa',
-  role: isRTL
-    ? 'مهندس مشروعات تركيب الإضاءة والثريات والنجف'
-    : 'Lighting, Chandeliers & Decorative Fixtures Installation Project Engineer',
-  bio: isRTL
-    ? 'يمتلك خبرة تمتد إلى 5 سنوات في إدارة وتنفيذ مشروعات تركيب الإضاءة والثريات والنجف والإشراف على التنفيذ، وضمان الالتزام بالمخططات الفنية، ومعايير الجودة، والجداول الزمنية للمشروعات.'
-    : '5 years of experience in managing and executing lighting, chandelier, and decorative fixture installation projects, supervising on-site execution, ensuring compliance with technical drawings, quality standards.',
-  image: "/team/ad.png"
-},
+    {
+      name: isRTL ? 'م/ أدهم مصطفى' : 'Eng. Adham Mostafa',
+      role: isRTL
+        ? 'مهندس مشروعات تركيب الإضاءة والثريات والنجف'
+        : 'Lighting, Chandeliers & Decorative Fixtures Installation Project Engineer',
+      bio: isRTL
+        ? 'يمتلك خبرة تمتد إلى 5 سنوات في إدارة وتنفيذ مشروعات تركيب الإضاءة والثريات والنجف والإشراف على التنفيذ، وضمان الالتزام بالمخططات الفنية، ومعايير الجودة، والجداول الزمنية للمشروعات.'
+        : '5 years of experience in managing and executing lighting, chandelier, and decorative fixture installation projects, supervising on-site execution, ensuring compliance with technical drawings, quality standards.',
+      image: "/team/ad.png"
+    },
 
 
-       {
- name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'EngAbdulrahman Ismail',
-  role: isRTL
-    ? 'مهندس  في تصميم الثريا - خبرة 5 سنوات'
-    : 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
-  bio: isRTL
-    ? 'متخصص في تصميم الثريات مع خبرة تمتد إلى 5 سنوات في إعداد الرسومات التنفيذية والتفصيلية بدقة عالية وتحويل الأفكار إلى تصاميم احترافية قابلة للتنفيذ.'
-    : 'Specialized in chandelier design using AutoCAD, with 5 years of experience creating detailed technical drawings, production-ready designs, and precise drafting solutions.',
-  image: "/team/abd.png" // غيّر المسار حسب الصورة الفعلية
-},
+    {
+      name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'EngAbdulrahman Ismail',
+      role: isRTL
+        ? 'مهندس  في تصميم الثريا - خبرة 5 سنوات'
+        : 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
+      bio: isRTL
+        ? 'متخصص في تصميم الثريات مع خبرة تمتد إلى 5 سنوات في إعداد الرسومات التنفيذية والتفصيلية بدقة عالية وتحويل الأفكار إلى تصاميم احترافية قابلة للتنفيذ.'
+        : 'Specialized in chandelier design using AutoCAD, with 5 years of experience creating detailed technical drawings, production-ready designs, and precise drafting solutions.',
+      image: "/team/abd.png" // غيّر المسار حسب الصورة الفعلية
+    },
 
     {
       name: isRTL ? 'م/ هانيا هشام' : 'Hania Hesham',
@@ -101,7 +101,7 @@ const About = () => {
     },
 
 
-    
+
     {
       name: isRTL ? 'م/خالد الراشد' : 'Eng / Khalid Al-Rashid',
       role: isRTL ? 'مدير التركيب' : 'Installation Manager',
@@ -110,9 +110,9 @@ const About = () => {
         : 'Technical expert with 15 years of experience in luxury lighting installation.',
       image: "/team/happy-confident-young-attractive-arabic-260nw-2107625390.jpg"
     },
-    
-    
-    
+
+
+
 
   ];
 
