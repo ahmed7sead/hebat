@@ -26,16 +26,16 @@ const About = () => {
   const teamMembers = [
     {
       name: isRTL ? 'م/اشرف عبدالعزيز' : 'Eng / Ashraf Abd elaziz ',
-      role: isRTL ? ' المدير التنفيذي ومدير المشروعات' : 'CEO & project manager',
+      role: isRTL ? ' المدير التنفيذي وعضو مجلس ادارة' : 'CEO & Board Member',
       bio: isRTL
         ? 'خبرة 25 عامًا في مجال الإضاءة الفاخرة والتركيب الداخلي. وادارة المشروعات الضخمة'
         : '25 years of experience in luxury lighting and interior design.',
-      image: "/News/profile.webp"
+      image: "/team/as.png"
     },
 
     {
       name: isRTL ? 'م/محمد اشرف' : 'Eng / Mohamed Ashraf',
-      role: isRTL ? 'نائب  مديرالمشروعات' : 'Deputy Project Manager',
+      role: isRTL ? 'نائب  مديرالمشروعات' : 'Deputy Project Manager' ,
       bio: isRTL
         ? 'مسئول تنسيق ومتابعة سير المشروعات، والتواصل بين فرق العمل، والحرص على تنفيذ الأعمال وفق الخطط والجداول الزمنية المحددة'
         : 'Responsible for coordinating and monitoring project progress, facilitating communication between teams, and ensuring work is executed according to established plans and schedules..',
@@ -44,7 +44,7 @@ const About = () => {
 
      {
       name: isRTL ? 'م/محمد متولي' : 'Eng / Mohamed Ashraf',
-      role: isRTL ? 'مدير المكتب الفني' : 'Deputy Project Manager',
+      role: isRTL ? 'مدير المكتب الفني' : 'Technical Office Manager',
       bio: isRTL
         ? '   يمتلك خبرة تزيد عن 20 عامًا في التصميم الهندسي وإعداد الرسومات التنفيذية باستخدام AutoCAD، مع خبرة في مراجعة المخططات الفنية، وتنسيق الأعمال الهندسية، وضمان دقة التصميمات ومطابقتها لمتطلبات المشروع.'
         : 'Over 20 years of experience in engineering design and AutoCAD drafting, with extensive expertise in reviewing technical drawings, coordinating engineering works, and ensuring design accuracy and compliance with project requirements...',
@@ -74,10 +74,10 @@ const About = () => {
        {
  name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'EngAbdulrahman Ismail',
   role: isRTL
-    ? 'مهندس أوتوكاد في تصميم الثريا - خبرة 5 سنوات'
+    ? 'مهندس  في تصميم الثريا - خبرة 5 سنوات'
     : 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
   bio: isRTL
-    ? 'متخصص في تصميم الثريات باستخدام برنامج أوتوكاد، مع خبرة تمتد إلى 5 سنوات في إعداد الرسومات التنفيذية والتفصيلية بدقة عالية وتحويل الأفكار إلى تصاميم احترافية قابلة للتنفيذ.'
+    ? 'متخصص في تصميم الثريات مع خبرة تمتد إلى 5 سنوات في إعداد الرسومات التنفيذية والتفصيلية بدقة عالية وتحويل الأفكار إلى تصاميم احترافية قابلة للتنفيذ.'
     : 'Specialized in chandelier design using AutoCAD, with 5 years of experience creating detailed technical drawings, production-ready designs, and precise drafting solutions.',
   image: "/team/abd.png" // غيّر المسار حسب الصورة الفعلية
 },
