@@ -60,17 +60,30 @@ const Projects = () => {
     };
 
     const projects = [
+
         {
-            id: 'rixos-hotel',
-            title: isRTL ? 'فندق Rixos' : 'Rixos Hotel',
-            description: isRTL
-                ? 'مشروع إنارة فاخر شمل تصنيع وتركيب الثريات الكريستالية والإضاءة الداخلية والخارجية بالفندق بالكامل.'
-                : 'A luxury lighting project including manufacturing and installation of crystal chandeliers and full indoor-outdoor lighting systems.',
-            image: '/projects-page/Rixos/15.webp',
-            path: '/projects/rixos',
-            category: isRTL ? 'ضيافة' : 'Hospitality',
-            year: '2025'
-        },
+    id: 'moc-diriyah',
+    title: isRTL ? 'مبنى وزارة الثقافة بالدرعية' : 'Ministry of Culture HQ - Diriyah',
+    description: isRTL
+        ? 'تصنيع وتشكيل الهياكل المعدنية المعقدة والأسقف الديكورية والحلول الإنشائية بمبنى وزارة الثقافة بالدرعية.'
+        : 'Fabrication of complex metal structures, decorative ceilings, and engineering solutions at the Ministry of Culture HQ in Diriyah.',
+    image: '/projects-page/as.jpeg', // مسار الصورة المقترح للمجلد الجديد
+    path: '/projects/moc-diriyah',
+    category: isRTL ? 'ثقافي ووزارات' : 'Cultural & Ministry',
+    year: '2026'
+},
+
+            {
+                id: 'rixos-hotel',
+                title: isRTL ? 'فندق Rixos' : 'Rixos Hotel',
+                description: isRTL
+                    ? 'مشروع إنارة فاخر شمل تصنيع وتركيب الثريات الكريستالية والإضاءة الداخلية والخارجية بالفندق بالكامل.'
+                    : 'A luxury lighting project including manufacturing and installation of crystal chandeliers and full indoor-outdoor lighting systems.',
+                image: '/projects-page/Rixos/15.webp',
+                path: '/projects/rixos',
+                category: isRTL ? 'ضيافة' : 'Hospitality',
+                year: '2025'
+            },
         {
             id: 'commercial-plaza',
             title: isRTL ? 'بننسولا Worth' : 'Worth hotel',

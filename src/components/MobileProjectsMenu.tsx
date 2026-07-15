@@ -38,11 +38,11 @@ export const MobileProjectsMenu: React.FC<MobileProjectsMenuProps> = ({ setSheet
                     title: isRTL ? 'فندق إعمار' : 'Emmar Hotel',
                     path: '/projects/hotel-lobby',
                 },
-                {
-                    id: 'Makarem',
-                    title: isRTL ? 'فندق مكارم المدينة' : 'Makarem Al Madinah Hotel',
-                    path: '/projects/Makarem',
-                }
+               {
+    id: 'Makarem',
+    title: isRTL ? 'مبنى وزارة الثقافة بالدرعية' : 'Ministry of Culture HQ - Diriyah',
+    path: '/projects/Makarem',
+}
             ]
         },
         {
@@ -74,9 +74,20 @@ export const MobileProjectsMenu: React.FC<MobileProjectsMenuProps> = ({ setSheet
         },
         {
             id: 'factory',
-            title: isRTL ? 'منتجات مصنعنا' : 'Our Factory Products',
+            title: isRTL ? 'اعمال أخري' : 'other work',
             icon: Package,
             projects: [
+,
+                                {
+                 id: 'moc-diriyah',
+                  title: isRTL ? 'مبنى وزارة الثقافة بالدرعية' : 'Ministry of Culture HQ - Diriyah',
+                     path: '/projects/moc-diriyah',
+                    },
+,{
+                    id: 'project3',
+                    title: isRTL ? 'متحف البحر الاحمر' : 'Red Sea Museum ',
+                    path: '/simple-projects/project3',
+                },
                 {
                     id: 'project1',
                     title: isRTL ? 'النجف والثريات الإسلامية' : 'Islamic Chandeliers',
@@ -87,11 +98,6 @@ export const MobileProjectsMenu: React.FC<MobileProjectsMenuProps> = ({ setSheet
                     title: isRTL ? 'النجف والثريات المودرن' : 'Modern Chandeliers',
                     path: '/simple-projects/project2',
                 },
-                {
-                    id: 'project3',
-                    title: isRTL ? 'متحف البحر الاحمر' : 'Red Sea Museum ',
-                    path: '/simple-projects/project3',
-                }
             ]
         }
     ];

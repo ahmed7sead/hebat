@@ -543,7 +543,46 @@ const getProjectsData = (isRTL: boolean): Record<string, ProjectType> => {
       ]
 
     },
+'moc-diriyah': { 
+      title: isRTL ? 'مبنى وزارة الثقافة بالدرعية' : 'Ministry of Culture HQ - Diriyah',
+      subtitle: isRTL ? 'الدرعية، الرياض، المملكة العربية السعودية' : 'Diriyah, Riyadh, Saudi Arabia',
+      description: isRTL
+        ? 'تصنيع وتشكيل الهياكل المعدنية والأسقف الديكورية فائقة التعقيد بمبنى وزارة الثقافة بالدرعية، لتقديم حلول إنشائية مبتكرة تحتضن وتتكامل مع أنظمة الإضاءة الديناميكية.'
+        : 'Fabricating ultra-complex metal structures and decorative ceilings at the Ministry of Culture HQ in Diriyah, delivering innovative structural solutions that seamlessly integrate with dynamic lighting systems.',
+      year: '2026',
+      category: isRTL ? 'ثقافي ومعالم' : 'Cultural & Landmarks',
+      client: isRTL ? 'وزارة الثقافة السعودية' : 'Saudi Ministry of Culture',
+      location: isRTL ? 'حي الطريف، الدرعية، المملكة العربية السعودية' : 'At-Turaif, Diriyah, Saudi Arabia',
+      mainImage: '/projects-page/Makarem/19t.webp', 
 
+      gallery: [
+        { full: '/projects-page/moc/1.jpg', thumbnail: '/projects-page/moc/thumbs/1.jpg' },
+        { full: '/projects-page/moc/2.jpeg', thumbnail: '/projects-page/moc/thumbs/2.jpeg' },
+        { full: '/projects-page/moc/3.png', thumbnail: '/projects-page/moc/thumbs/3.png' },
+        { full: '/projects-page/moc/4.jpeg', thumbnail: '/projects-page/moc/thumbs/4.jpeg' },
+        { full: '/projects-page/moc/5.jpeg', thumbnail: '/projects-page/moc/thumbs/5.jpeg' },
+        { full: '/projects-page/moc/6.jpeg', thumbnail: '/projects-page/moc/thumbs/6.jpeg' },
+        { full: '/projects-page/moc/7.jpeg', thumbnail: '/projects-page/moc/thumbs/7.jpeg' },
+        { full: '/projects-page/moc/8.jpeg', thumbnail: '/projects-page/moc/thumbs/8.jpeg' },
+        { full: '/projects-page/moc/9.jpeg', thumbnail: '/projects-page/moc/thumbs/9.jpg' },
+        { full: '/projects-page/moc/10.webp', thumbnail: '/projects-page/moc/thumbs/10.webp' }
+        
+      ],
+      details: [
+        {
+          title: isRTL ? 'هندسة الهياكل وتكامل حلول الإضاءة' : 'Structural Engineering & Lighting Integration',
+          content: isRTL
+            ? 'نجحت هبات الشرق في تقديم حلول هندسية متكاملة لمشروع مقر وزارة الثقافة بالدرعية. شمل دورنا تصنيع وتركيب الهياكل والأسقف المعدنية الانسيابية بدقة ميكانيكية متناهية، مما أتاح احتضان وتوزيع الإضاءة الديناميكية الحديثة بأسلوب يبرز التفاصيل المعمارية الفريدة للمبنى ويخلق عمقاً بصرياً مذهلاً.'
+            : 'Hebat East successfully delivered comprehensive engineering solutions for the Ministry of Culture HQ in Diriyah. Our scope involved fabricating and installing fluid metal structures and custom ceilings with utmost mechanical precision. This seamlessly accommodated and distributed modern dynamic lighting, accentuating the building’s unique architectural details and creating a stunning visual depth.'
+        },
+        {
+          title: isRTL ? 'أسقف فنية مستوحاة من الهوية والتراث' : 'Artistic Ceilings Inspired by Heritage',
+          content: isRTL
+            ? 'تم تصنيع وتشكيل عناصر معمارية وشرائح متموجة صُممت خصيصاً لتناسب الطابع التراثي العريق للدرعية بلمسة حداثية ملهمة. تعكس هذه الحلول المعدنية قدرة مصانعنا على تحويل التصاميم المعقدة إلى واقع ملموس يتناغم بالكامل مع الرؤيةf البصرية الشاملة لهذا المعلم الوطني الكبير.'
+            : 'Custom-designed undulating elements and metallic patterns were fabricated to reflect the rich heritage of Diriyah with an inspiring modern touch. These architectural solutions showcase our factories\' capabilities to transform highly complex designs into physical masterpieces that align with the overall visual identity of this grand national landmark.'
+        }
+      ]
+    },
     'mosque4': {
       title: isRTL ? 'جامع الشيخ سعد بن محمد العجلان ' : 'Muhammad Al-Ajlan Mosque',
       subtitle: isRTL ? 'الرياض , المملكة العربية السعودية' : 'Riyadh, KSA',

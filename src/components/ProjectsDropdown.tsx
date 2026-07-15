@@ -125,9 +125,28 @@ export const ProjectsDropdown: React.FC<ProjectsDropdownProps> = ({ triggerRef }
         },
         {
             id: 'factory',
-            title: isRTL ? 'منتجات مصنعنا' : 'Our Factory Products',
+            title: isRTL ? 'اعمال اخري' : 'Other Works',
             icon: Package,
             projects: [
+                {
+                 id: 'moc-diriyah',
+                  title: isRTL ? 'مبنى وزارة الثقافة بالدرعية' : 'Ministry of Culture HQ - Diriyah',
+                     path: '/projects/moc-diriyah',
+                                        icon: Calendar,
+
+                    }
+
+                ,
+
+
+                {
+                    id: 'project3',
+                    title: isRTL ? 'متحف البحر الأحمر' : 'Red Sea Museum',
+                    path: '/simple-projects/project3',
+                    icon: Calendar,
+                },
+
+
                 {
                     id: 'project1',
                     title: isRTL ? 'النجف والثريات الإسلامية' : 'Islamic Chandeliers',
@@ -140,12 +159,6 @@ export const ProjectsDropdown: React.FC<ProjectsDropdownProps> = ({ triggerRef }
                     path: '/simple-projects/project2',
                     icon: Package,
                 },
-                {
-                    id: 'project3',
-                    title: isRTL ? 'متحف البحر الأحمر' : 'Red Sea Museum',
-                    path: '/simple-projects/project3',
-                    icon: Calendar,
-                }
             ]
         }
     ];

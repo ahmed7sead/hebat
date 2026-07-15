@@ -33,6 +33,7 @@ const HeroSection: React.FC = () => {
   // Carousel slides data
   const slides: CarouselSlide[] = [
 
+
      {
       id: 4,
       image: 'News/makarem/hero.png',
@@ -66,7 +67,24 @@ const HeroSection: React.FC = () => {
         ar: ' المشروع',
         en: ' project'
       }
+    },    {
+      id: 5,
+      image: 'projects-page/moc/8.jpeg', // تم الحفاظ على نفس مسار الصورة لتجنب أي مشاكل في التحميل
+      title: {
+        ar: 'مبنى وزارة الثقافة بالدرعية',
+        en: 'Ministry of Culture - Diriyah'
+      },
+      description: {
+        ar: 'تصنيع وتشكيل الهياكل المعدنية المعقدة والأسقف الديكورية والحلول الإنشائية المتكاملة مع الإضاءة الديناميكية.',
+        en: 'Fabrication of complex metal structures, decorative ceilings, and engineering solutions integrated with dynamic lighting.'
+      },
+      projectLink: '/projects/moc-diriyah',
+      projectName: {
+        ar: 'عرض المشروع',
+        en: 'View Project'
+      }
     },
+
     {
       id: 2,
       image: 'Logo_and_identity/hero-Rixos.webp',
@@ -84,6 +102,7 @@ const HeroSection: React.FC = () => {
         en: ' project'
       }
     },
+    
     {
       id: 3,
       image: 'Logo_and_identity/hero-crown.webp',
