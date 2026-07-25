@@ -28,9 +28,8 @@ const About = () => {
       name: isRTL ? 'م/اشرف عبدالعزيز' : 'Eng / Ashraf Abd elaziz ',
       role: isRTL ? ' المدير التنفيذي وعضو مجلس ادارة' : 'CEO & Board Member',
       bio: isRTL
-        ? 'خبرة 25 عامًا في مجال الإضاءة الفاخرة والتركيب الداخلي. وادارة المشروعات الضخمة'
-        : '25 years of experience in luxury lighting and interior design.',
-      image: "/team/as.png"
+        ? 'يمتلك أكثر من 25 عامًا من الخبرة في إدارة وتنفيذ مشاريع الإضاءة الفاخرة والنجف والثريات للمشاريع الكبرى. حاصل على شهادة PMP وشهادات مهنية في الإدارة التنفيذية، ويتمتع بخبرة واسعة في قيادة الفرق، وإدارة المشاريع الضخمة، والتخطيط الاستراتيجي، وضمان تحقيق أعلى معايير الجودة والكفاءة.'
+        : 'With over 25 years of experience in managing and delivering luxury lighting, chandeliers, and decorative lighting projects, he is PMP certified and holds executive management certifications. He has extensive expertise in leading multidisciplinary teams, managing large-scale projects, strategic planning, and delivering projects to the highest standards of quality and operational excellence.', image: "/team/as.png"
     },
 
     {
@@ -70,10 +69,53 @@ const About = () => {
         : '5 years of experience in managing and executing lighting, chandelier, and decorative fixture installation projects, supervising on-site execution, ensuring compliance with technical drawings, quality standards.',
       image: "/team/ad.png"
     },
+    {
+      name: isRTL ? 'م/ محمد مصطفى' : 'Eng. Mohamed Mostafa',
+      role: isRTL ? 'مهندس مشروعات ' : 'Senior Projects Engineer',
+      bio: isRTL
+        ? 'يمتلك خبرة واسعة في إدارة وتنفيذ مشاريع الإضاءة والنجف والثريات بالمملكة العربية السعودية، مع الإشراف على جميع مراحل المشروع بدءًا من التخطيط والتنسيق وحتى التركيب والتسليم وفق أعلى معايير الجودة.'
+        : 'Experienced in managing and delivering lighting, chandeliers, and decorative lighting projects across Saudi Arabia, overseeing every project phase from planning and coordination to installation and final handover while ensuring the highest quality standards.',
+      image: "/team/ms.png"
+    },
+
+    {
+      name: isRTL ? 'سيد حسين' : 'Sayed Hussein',
+      role: isRTL ? 'أخصائي تسويق' : 'Marketing Specialist',
+      bio: isRTL
+        ? 'يمتلك خبرة تتجاوز 15 عامًا في تسويق وبيع النجف والثريات وحلول الإضاءة، مع خبرة في بناء علاقات قوية مع العملاء، وتحليل احتياجات المشاريع، وتقديم الحلول المناسبة التي تجمع بين الجودة والقيمة.'
+        : 'With over 15 years of experience in marketing and sales of chandeliers, decorative lighting, and lighting solutions, he specializes in building strong client relationships, understanding project requirements, and delivering tailored solutions that combine quality and value.',
+      image: "/team/sh.png"
+    },
+
 
 
     {
-      name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'EngAbdulrahman Ismail',
+      name: isRTL ? 'م/ مهاب إسماعيل' : 'Eng. Mohab Ismail',
+      role: isRTL ? 'مهندس إنتاج' : 'Production Engineer',
+      bio: isRTL
+        ? 'يمتلك خبرة تمتد لأربع سنوات في عمليات تصنيع النجف والثريات، مع التركيز على متابعة مراحل الإنتاج، وضبط الجودة، والالتزام بمعايير التصنيع لتحقيق أفضل النتائج.'
+        : 'Production Engineer with 4 years of experience in chandelier and decorative lighting manufacturing, focusing on production processes, quality control, and maintaining high manufacturing standards.',
+      image: "/team/mah.png"
+    },
+    {
+      name: isRTL ? 'م/ شريف حجازي' : 'Eng / Sherif Hejazy',
+      role: isRTL ? 'مهندس معماري ومتخصص تصيير ثلاثي الأبعاد' : 'Architect & 3D Visualizer',
+      bio: isRTL
+        ? 'متخصص في التصيير الثلاثي الأبعاد والتصميم الواقعي للمشروعات الداخلية والخارجية.'
+        : 'Specialist in 3D visualization and realistic design for interior and exterior projects.',
+      image: "/team/sherif.JPG" // غير المسار حسب الصورة الحقيقية
+    },
+    {
+      name: isRTL ? 'م/ هانيا هشام' : 'Hania Hesham',
+      role: isRTL ? 'مهندسة معمارية ومصممة داخلية' : 'Architect & Interior Designer',
+      bio: isRTL
+        ? 'خبيرة في تصميم المساحات الداخلية العصرية مع لمسة فنية تناسب مختلف الأذواق.'
+        : 'Expert in modern interior space design with an artistic touch tailored to diverse styles.',
+      image: "/team/hania.jpg" // غير المسار حسب الصورة الحقيقية
+    },
+
+    {
+      name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'Eng / Abdulrahman Ismail',
       role: isRTL
         ? 'مهندس  في تصميم الثريا - خبرة 5 سنوات'
         : 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
@@ -83,33 +125,7 @@ const About = () => {
       image: "/team/abd.png" // غيّر المسار حسب الصورة الفعلية
     },
 
-    {
-      name: isRTL ? 'م/ هانيا هشام' : 'Hania Hesham',
-      role: isRTL ? 'مهندسة معمارية ومصممة داخلية' : 'Architect & Interior Designer',
-      bio: isRTL
-        ? 'خبيرة في تصميم المساحات الداخلية العصرية مع لمسة فنية تناسب مختلف الأذواق.'
-        : 'Expert in modern interior space design with an artistic touch tailored to diverse styles.',
-      image: "/team/hania.jpg" // غير المسار حسب الصورة الحقيقية
-    },
-    {
-      name: isRTL ? 'م/ شريف حجازي' : 'Sherif Hejazy',
-      role: isRTL ? 'مهندس معماري ومتخصص تصيير ثلاثي الأبعاد' : 'Architect & 3D Visualizer',
-      bio: isRTL
-        ? 'متخصص في التصيير الثلاثي الأبعاد والتصميم الواقعي للمشروعات الداخلية والخارجية.'
-        : 'Specialist in 3D visualization and realistic design for interior and exterior projects.',
-      image: "/team/sherif.JPG" // غير المسار حسب الصورة الحقيقية
-    },
 
-
-
-    {
-      name: isRTL ? 'م/خالد الراشد' : 'Eng / Khalid Al-Rashid',
-      role: isRTL ? 'مدير التركيب' : 'Installation Manager',
-      bio: isRTL
-        ? 'خبير تقني بخبرة 15 عامًا في تركيب الإضاءة الفاخرة.'
-        : 'Technical expert with 15 years of experience in luxury lighting installation.',
-      image: "/team/happy-confident-young-attractive-arabic-260nw-2107625390.jpg"
-    },
 
 
 

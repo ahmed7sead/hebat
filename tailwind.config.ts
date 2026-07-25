@@ -91,6 +91,7 @@ export default {
 				'heading-5': ['1.25rem', { lineHeight: '1.4', fontWeight: '600' }],
 				'body-large': ['1.125rem', { lineHeight: '1.5' }],
 				'body': ['1rem', { lineHeight: '1.5' }],
+
 				'body-small': ['0.875rem', { lineHeight: '1.5' }],
 			},
 			keyframes: {

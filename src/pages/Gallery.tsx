@@ -2,7 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { motion, AnimatePresence } from 'framer-motion';
 import LazyImage from '../components/LazyImage';
-import { Eye, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import {
+  Eye,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Factory as FactoryIcon,
+  Users,
+  Ruler,
+  Award,
+  Cog,
+  Hammer,
+  CheckCircle2,
+  PackageCheck
+} from 'lucide-react';
 
 const Gallery = () => {
   const { isRTL } = useLanguage();
@@ -16,6 +29,87 @@ const Gallery = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  // ------------------------------
+  // Factory overview content
+  // ------------------------------
+  const factoryFeatures = [
+    {
+      textEN: 'Over 15 years of experience in chandelier manufacturing',
+      textAR: 'أكثر من 15 عامًا من الخبرة في تصنيع الثريات'
+    },
+    {
+      textEN: 'Modern machinery and precision production lines',
+      textAR: 'آلات حديثة وخطوط إنتاج عالية الدقة'
+    },
+    {
+      textEN: 'Skilled craftsmen and quality control specialists',
+      textAR: 'حرفيون مهرة ومتخصصون في مراقبة الجودة'
+    },
+    {
+      textEN: 'Custom designs tailored to every project',
+      textAR: 'تصاميم مخصصة تناسب كل مشروع'
+    }
+  ];
+
+  // ------------------------------
+  // Stats
+  // ------------------------------
+  const stats = [
+    { icon: Award, valueEN: '15+', valueAR: '15+', labelEN: 'Years of Experience', labelAR: 'سنة خبرة' },
+    { icon: Users, valueEN: '50+', valueAR: '50+', labelEN: 'Skilled Employees', labelAR: 'موظف محترف' },
+    { icon: Ruler, valueEN: '5000 m²', valueAR: '5000 م²', labelEN: 'Factory Area', labelAR: 'مساحة المصنع' },
+    { icon: PackageCheck, valueEN: '1000+', valueAR: '1000+', labelEN: 'Projects Delivered', labelAR: 'مشروع منجز' }
+  ];
+
+  // ------------------------------
+  // Manufacturing process steps
+  // ------------------------------
+  const processSteps = [
+    {
+      icon: Cog,
+      titleEN: 'Design',
+      titleAR: 'التصميم',
+      descEN: 'Our designers turn ideas and client requirements into detailed technical drawings.',
+      descAR: 'يقوم مصمّمونا بتحويل الأفكار ومتطلبات العميل إلى رسومات فنية تفصيلية.'
+    },
+    {
+      icon: Hammer,
+      titleEN: 'Manufacturing',
+      titleAR: 'التصنيع',
+      descEN: 'Skilled craftsmen shape and assemble every piece with precision.',
+      descAR: 'يقوم الحرفيون المهرة بتشكيل وتجميع كل قطعة بدقة عالية.'
+    },
+    {
+      icon: CheckCircle2,
+      titleEN: 'Quality Check',
+      titleAR: 'فحص الجودة',
+      descEN: 'Every product passes strict quality control before approval.',
+      descAR: 'يمر كل منتج بمراقبة جودة صارمة قبل اعتماده.'
+    },
+    {
+      icon: PackageCheck,
+      titleEN: 'Packaging & Delivery',
+      titleAR: 'التغليف والتسليم',
+      descEN: 'Products are carefully packaged and delivered on schedule.',
+      descAR: 'يتم تغليف المنتجات بعناية وتسليمها في الموعد المحدد.'
+    }
+  ];
+
+  // ------------------------------
+  // Inside the factory - workshop photos (placeholder paths)
+  // ------------------------------
+  const workshopImages = [
+    { id: 1, url: '/factory/workshop-1.jpg', titleEN: 'Production Line', titleAR: 'خط الإنتاج' },
+    { id: 2, url: '/factory/workshop-2.jpg', titleEN: 'Metal Work Station', titleAR: 'محطة تشغيل المعادن' },
+    { id: 3, url: '/factory/workshop-3.jpg', titleEN: 'Assembly Area', titleAR: 'منطقة التجميع' },
+    { id: 4, url: '/factory/workshop-4.jpg', titleEN: 'Quality Inspection', titleAR: 'فحص الجودة' },
+    { id: 5, url: '/factory/workshop-5.jpg', titleEN: 'Finishing Department', titleAR: 'قسم التشطيب' },
+    { id: 6, url: '/factory/workshop-6.jpg', titleEN: 'Packaging Section', titleAR: 'قسم التغليف' }
+  ];
+
+  // ------------------------------
+  // Products (formerly the full Gallery page content)
+  // ------------------------------
   const categories = [
     { id: 'all', nameEN: 'All', nameAR: 'الكل' },
     { id: 'modern', nameEN: 'Modern', nameAR: 'عصري' },
@@ -221,10 +315,16 @@ const Gallery = () => {
     }
   };
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
     <>
       <div className="pt-24">
-        {/* Header - Updated title */}
+
+        {/* ============ HERO ============ */}
         <section className="bg-charcoal text-white py-20">
           <div className="container-custom mx-auto">
             <div className={`max-w-3xl ${isRTL ? 'text-right' : 'text-left'}`}>
@@ -234,7 +334,7 @@ const Gallery = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                {isRTL ? 'منتجات مصنعنا' : 'Our factory product '}
+                {isRTL ? 'مصنعنا' : 'Our Factory'}
               </motion.h1>
               <motion.p
                 className="text-xl text-gray-300"
@@ -243,22 +343,220 @@ const Gallery = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
                 {isRTL
-                  ? 'استكشف مجموعتنا من الثريات الفاخرة والعصرية ومشاريعنا السابقة'
-                  : 'Explore our collection of luxury and modern chandeliers and previous projects'}
+                  ? 'من التصميم إلى التصنيع، تعرف على مصنعنا وشاهد أحدث منتجاتنا من الثريات الفاخرة والعصرية'
+                  : 'From design to manufacturing — discover our factory and explore our latest collection of luxury and modern chandeliers'}
               </motion.p>
             </div>
           </div>
         </section>
 
-        {/* Gallery */}
+        {/* ============ FACTORY OVERVIEW ============ */}
         <section className="py-20">
           <div className="container-custom mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <motion.div
+                className="rounded-lg overflow-hidden shadow-lg elegant-shadow h-96"
+                initial={{ opacity: 0, x: isRTL ? 40 : -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <LazyImage
+                  src="/factory/main.jpg"
+                  alt={isRTL ? 'مصنعنا' : 'Our Factory'}
+                  className="w-full h-full object-cover"
+                />
+              </motion.div>
+
+              <motion.div
+                className={isRTL ? 'text-right' : 'text-left'}
+                initial={{ opacity: 0, x: isRTL ? -40 : 40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className={`flex items-center gap-3 mb-4 ${isRTL ? 'flex-row-reverse justify-end' : ''}`}>
+                  <FactoryIcon className="w-8 h-8 text-gold" />
+                  <h2 className="text-3xl font-bold text-charcoal">
+                    {isRTL ? 'نبذة عن مصنعنا' : 'About Our Factory'}
+                  </h2>
+                </div>
+                <p className="text-gray-600 text-lg mb-6 leading-relaxed">
+                  {isRTL
+                    ? 'يجمع مصنعنا بين الحرفية التقليدية والتقنيات الحديثة لإنتاج ثريات فاخرة تلبي أعلى معايير الجودة. نفخر بفريق من الحرفيين المهرة وخطوط إنتاج متطورة تمكننا من تنفيذ أي تصميم مهما كانت تفاصيله.'
+                    : 'Our factory combines traditional craftsmanship with modern technology to produce luxury chandeliers that meet the highest quality standards. We take pride in our skilled craftsmen and advanced production lines that allow us to execute any design, no matter how detailed.'}
+                </p>
+                <ul className="space-y-3">
+                  {factoryFeatures.map((feature, index) => (
+                    <li
+                      key={index}
+                      className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse text-right' : ''}`}
+                    >
+                      <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0 mt-1" />
+                      <span className="text-gray-700">
+                        {isRTL ? feature.textAR : feature.textEN}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* ============ STATS ============ */}
+        <section className="bg-charcoal text-white py-16">
+          <div className="container-custom mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <Icon className="w-8 h-8 text-gold mx-auto mb-3" />
+                    <div className="text-3xl font-bold mb-1">
+                      {isRTL ? stat.valueAR : stat.valueEN}
+                    </div>
+                    <div className="text-gray-300 text-sm">
+                      {isRTL ? stat.labelAR : stat.labelEN}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ============ MANUFACTURING PROCESS ============ */}
+        <section className="py-20 bg-gray-50">
+          <div className="container-custom mx-auto">
+            <motion.div
+              className="text-center max-w-2xl mx-auto mb-16"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={fadeUp}
+            >
+              <h2 className="text-3xl font-bold text-charcoal mb-4">
+                {isRTL ? 'مراحل التصنيع' : 'Our Manufacturing Process'}
+              </h2>
+              <p className="text-gray-600">
+                {isRTL
+                  ? 'كل قطعة تمر بمراحل دقيقة لضمان أعلى مستوى من الجودة والإتقان'
+                  : 'Every piece goes through precise stages to ensure the highest level of quality and craftsmanship'}
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {processSteps.map((step, index) => {
+                const Icon = step.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-6 shadow-lg elegant-shadow text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
+                    <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
+                      <Icon className="w-8 h-8 text-gold" />
+                    </div>
+                    <div className="text-gold font-bold mb-2">
+                      {String(index + 1).padStart(2, '0')}
+                    </div>
+                    <h3 className="text-xl font-bold text-charcoal mb-2">
+                      {isRTL ? step.titleAR : step.titleEN}
+                    </h3>
+                    <p className="text-gray-600 text-sm">
+                      {isRTL ? step.descAR : step.descEN}
+                    </p>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* ============ INSIDE THE FACTORY ============ */}
+        <section className="py-20">
+          <div className="container-custom mx-auto">
+            <motion.div
+              className="text-center max-w-2xl mx-auto mb-16"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={fadeUp}
+            >
+              <h2 className="text-3xl font-bold text-charcoal mb-4">
+                {isRTL ? 'لمحة من داخل مصنعنا' : 'Inside Our Factory'}
+              </h2>
+              <p className="text-gray-600">
+                {isRTL
+                  ? 'جولة سريعة داخل خطوط الإنتاج وورش العمل لدينا'
+                  : 'A quick look inside our production lines and workshops'}
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+              {workshopImages.map((image, index) => (
+                <motion.div
+                  key={image.id}
+                  className="relative h-56 rounded-lg overflow-hidden shadow-lg elegant-shadow group"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.08 }}
+                >
+                  <LazyImage
+                    src={image.url}
+                    alt={isRTL ? image.titleAR : image.titleEN}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-4">
+                    <span className="text-white font-medium">
+                      {isRTL ? image.titleAR : image.titleEN}
+                    </span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ============ PRODUCTS (formerly the standalone Gallery page) ============ */}
+        <section className="py-20 bg-gray-50">
+          <div className="container-custom mx-auto">
+            <motion.div
+              className="text-center max-w-2xl mx-auto mb-12"
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={fadeUp}
+            >
+              <h2 className="text-3xl font-bold text-charcoal mb-4">
+                {isRTL ? 'منتجاتنا' : 'Our Products'}
+              </h2>
+              <p className="text-gray-600">
+                {isRTL
+                  ? 'استكشف مجموعتنا من الثريات الفاخرة والعصرية ومشاريعنا السابقة'
+                  : 'Explore our collection of luxury and modern chandeliers and previous projects'}
+              </p>
+            </motion.div>
+
             {/* Categories */}
             <motion.div
               className={`flex flex-wrap gap-4 mb-12 ${isRTL ? 'justify-end' : 'justify-start'}`}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
             >
               {categories.map((category, index) => (
                 <motion.button
@@ -272,8 +570,9 @@ const Gallery = () => {
                     : 'bg-gray-100 text-charcoal hover:bg-gray-200'
                     }`}
                   initial={{ opacity: 0, x: isRTL ? -20 : 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -287,7 +586,8 @@ const Gallery = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
-              animate="show"
+              whileInView="show"
+              viewport={{ once: true }}
               key={activeCategory} // Re-render animation when category changes
             >
               {filteredItems.slice(0, visibleItems).map((item, index) => (
@@ -329,8 +629,9 @@ const Gallery = () => {
               <motion.div
                 className="text-center mt-12"
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
                 <motion.button
                   onClick={loadMore}
