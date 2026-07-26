@@ -79,6 +79,26 @@ const About = () => {
     },
 
     {
+      name: isRTL ? 'م/ شريف حجازي' : 'Eng / Sherif Hejazy',
+      role: isRTL ? 'مهندس معماري ومتخصص تصيير ثلاثي الأبعاد' : 'Architect & 3D Visualizer',
+      bio: isRTL
+        ? 'متخصص في التصيير الثلاثي الأبعاد والتصميم الواقعي للمشروعات الداخلية والخارجية.'
+        : 'Specialist in 3D visualization and realistic design for interior and exterior projects.',
+      image: "/team/sherif.JPG" // غير المسار حسب الصورة الحقيقية
+    },
+
+{
+  name: isRTL ? 'أحمد عبدالواحد' : 'Ahmed Abdelwahab',
+  role: isRTL
+    ? 'مطور أعمال'
+    : 'Business Development',
+  bio: isRTL
+    ? 'يساهم في تطوير أعمال الشركة وتعزيز حضورها الرقمي، مع مسؤولية عن إدارة وتطوير الموقع الإلكتروني وقنوات التواصل الاجتماعي والتسويق الإلكتروني، وتحسين الأدوات والمنصات الرقمية بما يدعم نمو الشركة.'
+    : 'Contributes to business development and strengthens the company’s digital presence, with responsibility for managing and developing the website, social media channels, and digital marketing activities while improving digital platforms and tools to support business growth.',
+  image: "/team/ahmed-pro.png" // غيّر المسار حسب الصورة الفعلية
+},
+
+    {
       name: isRTL ? 'سيد حسين' : 'Sayed Hussein',
       role: isRTL ? 'أخصائي تسويق' : 'Marketing Specialist',
       bio: isRTL
@@ -97,14 +117,7 @@ const About = () => {
         : 'Production Engineer with 4 years of experience in chandelier and decorative lighting manufacturing, focusing on production processes, quality control, and maintaining high manufacturing standards.',
       image: "/team/mah.png"
     },
-    {
-      name: isRTL ? 'م/ شريف حجازي' : 'Eng / Sherif Hejazy',
-      role: isRTL ? 'مهندس معماري ومتخصص تصيير ثلاثي الأبعاد' : 'Architect & 3D Visualizer',
-      bio: isRTL
-        ? 'متخصص في التصيير الثلاثي الأبعاد والتصميم الواقعي للمشروعات الداخلية والخارجية.'
-        : 'Specialist in 3D visualization and realistic design for interior and exterior projects.',
-      image: "/team/sherif.JPG" // غير المسار حسب الصورة الحقيقية
-    },
+    
     {
       name: isRTL ? 'م/ هانيا هشام' : 'Hania Hesham',
       role: isRTL ? 'مهندسة معمارية ومصممة داخلية' : 'Architect & Interior Designer',
@@ -125,9 +138,27 @@ const About = () => {
       image: "/team/abd.png" // غيّر المسار حسب الصورة الفعلية
     },
 
+{
+  name: isRTL ? 'مصطفى محمد' : 'Mostafa Mohamed',
+  role: isRTL
+    ? 'مصمم داخلي'
+    : 'Junior Designer',
+  bio: isRTL
+    ? 'متخصص في إعداد الرسومات والتعديلات باستخدام AutoCAD، ويساهم في تجهيز المخططات والرسومات الفنية وفق متطلبات العمل.'
+    : 'Junior AutoCAD specialist responsible for preparing and modifying technical drawings and supporting the team with accurate drafting using AutoCAD.',
+  image: "/team/mos2.png" // غيّر المسار حسب الصورة الفعلية
+},
 
-
-
+{
+  name: isRTL ? 'سارة عبدالتواب' : 'Sara Abdel Tawab',
+  role: isRTL
+    ? 'مديرة الموارد البشرية'
+    : 'Human Resources Manager',
+  bio: isRTL
+    ? 'مديرة الموارد البشرية ومسؤولة عن إدارة وتطوير الموارد البشرية، ودعم بيئة العمل، وتنظيم عمليات التوظيف والتطوير بما يدعم أهداف الشركة.'
+    : 'Human Resources Manager responsible for managing and developing human resources, supporting a positive work environment, and overseeing recruitment and employee development in alignment with the company’s goals.',
+  image: "/team/sara.png" // غيّر المسار حسب الصورة الفعلية
+},
 
 
   ];
