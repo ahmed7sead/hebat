@@ -29,9 +29,48 @@ const Gallery = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  // ------------------------------
+// Quality Certifications
+// ------------------------------
+const certifications = [
+  {
+    id: 1,
+    image: '/factory/9001.jpeg',
+    titleEN: 'ISO 9001',
+    titleAR: 'آيزو 9001',
+    descEN: 'Quality Management System',
+    descAR: 'شهادة نظام إدارة الجودة'
+  },
+  {
+    id: 2,
+    image: '/factory/14.jpeg',
+    titleEN: 'ISO 14001',
+    titleAR: 'آيزو 14001',
+    descEN: 'Environmental Management System',
+    descAR: 'شهادة نظام الإدارة البيئية'
+  },
+  {
+    id: 3,
+    image: '/factory/45.jpeg',
+    titleEN: 'ISO 45001',
+    titleAR: 'آيزو 45001',
+    descEN: 'Occupational Health & Safety Management',
+    descAR: 'شهادة إدارة الصحة والسلامة المهنية'
+  }
+];  // ------------------------------
   // Factory overview content
   // ------------------------------
+  // ------------------------------
+  // Manufacturing process steps
+  // ------------------------------
+  // Inside the factory - workshop photos (placeholder paths)
+  // ------------------------------
+  const workshopImages = [
+{ id: 1, url: '/factory/work1.png', titleEN: 'Production - Assembly', titleAR: 'تجميع -الإنتاج' },
+{ id: 2, url: '/factory/work2.jpeg', titleEN: 'Production - Welding', titleAR: 'الإنتاج-لحام' },
+{ id: 3, url: '/factory/work3.webp', titleEN: 'Production - Laser Cutting', titleAR: 'الإنتاج-ليزر' },
+{ id: 4, url: '/factory/work4.webp', titleEN: 'Production - CNC Machining', titleAR: 'الإنتاج-cnc' },
+{ id: 5, url: '/factory/work5.png', titleEN: 'Production - Brushing', titleAR: 'الإنتاج-الفرشاة' },
+{ id: 6, url: '/factory/work6.jpeg', titleEN: 'Production - Cutting', titleAR: 'الإنتاج-التقطيع' }  ];
   const factoryFeatures = [
     {
       textEN: 'Over 15 years of experience in chandelier manufacturing',
@@ -49,62 +88,6 @@ const Gallery = () => {
       textEN: 'Custom designs tailored to every project',
       textAR: 'تصاميم مخصصة تناسب كل مشروع'
     }
-  ];
-
-  // ------------------------------
-  // Stats
-  // ------------------------------
-  const stats = [
-    { icon: Award, valueEN: '15+', valueAR: '15+', labelEN: 'Years of Experience', labelAR: 'سنة خبرة' },
-    { icon: Users, valueEN: '50+', valueAR: '50+', labelEN: 'Skilled Employees', labelAR: 'موظف محترف' },
-    { icon: Ruler, valueEN: '5000 m²', valueAR: '5000 م²', labelEN: 'Factory Area', labelAR: 'مساحة المصنع' },
-    { icon: PackageCheck, valueEN: '1000+', valueAR: '1000+', labelEN: 'Projects Delivered', labelAR: 'مشروع منجز' }
-  ];
-
-  // ------------------------------
-  // Manufacturing process steps
-  // ------------------------------
-  const processSteps = [
-    {
-      icon: Cog,
-      titleEN: 'Design',
-      titleAR: 'التصميم',
-      descEN: 'Our designers turn ideas and client requirements into detailed technical drawings.',
-      descAR: 'يقوم مصمّمونا بتحويل الأفكار ومتطلبات العميل إلى رسومات فنية تفصيلية.'
-    },
-    {
-      icon: Hammer,
-      titleEN: 'Manufacturing',
-      titleAR: 'التصنيع',
-      descEN: 'Skilled craftsmen shape and assemble every piece with precision.',
-      descAR: 'يقوم الحرفيون المهرة بتشكيل وتجميع كل قطعة بدقة عالية.'
-    },
-    {
-      icon: CheckCircle2,
-      titleEN: 'Quality Check',
-      titleAR: 'فحص الجودة',
-      descEN: 'Every product passes strict quality control before approval.',
-      descAR: 'يمر كل منتج بمراقبة جودة صارمة قبل اعتماده.'
-    },
-    {
-      icon: PackageCheck,
-      titleEN: 'Packaging & Delivery',
-      titleAR: 'التغليف والتسليم',
-      descEN: 'Products are carefully packaged and delivered on schedule.',
-      descAR: 'يتم تغليف المنتجات بعناية وتسليمها في الموعد المحدد.'
-    }
-  ];
-
-  // ------------------------------
-  // Inside the factory - workshop photos (placeholder paths)
-  // ------------------------------
-  const workshopImages = [
-    { id: 1, url: '/factory/workshop-1.jpg', titleEN: 'Production Line', titleAR: 'خط الإنتاج' },
-    { id: 2, url: '/factory/workshop-2.jpg', titleEN: 'Metal Work Station', titleAR: 'محطة تشغيل المعادن' },
-    { id: 3, url: '/factory/workshop-3.jpg', titleEN: 'Assembly Area', titleAR: 'منطقة التجميع' },
-    { id: 4, url: '/factory/workshop-4.jpg', titleEN: 'Quality Inspection', titleAR: 'فحص الجودة' },
-    { id: 5, url: '/factory/workshop-5.jpg', titleEN: 'Finishing Department', titleAR: 'قسم التشطيب' },
-    { id: 6, url: '/factory/workshop-6.jpg', titleEN: 'Packaging Section', titleAR: 'قسم التغليف' }
   ];
 
   // ------------------------------
@@ -362,7 +345,7 @@ const Gallery = () => {
                 transition={{ duration: 0.6 }}
               >
                 <LazyImage
-                  src="/factory/main.jpg"
+                  src="/factory/sr.png"
                   alt={isRTL ? 'مصنعنا' : 'Our Factory'}
                   className="w-full h-full object-cover"
                 />
@@ -404,85 +387,73 @@ const Gallery = () => {
           </div>
         </section>
 
-        {/* ============ STATS ============ */}
-        <section className="bg-charcoal text-white py-16">
-          <div className="container-custom mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <Icon className="w-8 h-8 text-gold mx-auto mb-3" />
-                    <div className="text-3xl font-bold mb-1">
-                      {isRTL ? stat.valueAR : stat.valueEN}
-                    </div>
-                    <div className="text-gray-300 text-sm">
-                      {isRTL ? stat.labelAR : stat.labelEN}
-                    </div>
-                  </motion.div>
-                );
-              })}
+        
+{/* ============ QUALITY CERTIFICATIONS ============ */}
+<section className="py-20 bg-charcoal text-white relative overflow-hidden">
+  {/* Decorative gold glow */}
+  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-gold/10 rounded-full blur-3xl pointer-events-none" />
+
+  <div className="container-custom mx-auto relative z-10">
+    <motion.div
+      className="text-center max-w-2xl mx-auto mb-16"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      variants={fadeUp}
+    >
+      <div className="flex items-center justify-center gap-2 mb-4">
+        <Award className="w-6 h-6 text-gold" />
+        <span className="text-gold text-sm font-semibold tracking-widest uppercase">
+          {isRTL ? 'الجودة والاعتماد' : 'Quality & Certification'}
+        </span>
+      </div>
+      <h2 className="text-3xl font-bold mb-4">
+        {isRTL ? 'نلتزم بأعلى معايير ومقاييس الجودة' : 'We Uphold the Highest Quality Standards'}
+      </h2>
+      <p className="text-gray-300">
+        {isRTL
+          ? 'مصنعنا معتمد رسميًا ويعمل وفق أنظمة جودة عالمية تضمن لك منتجًا يليق بثقتك'
+          : 'Our factory is officially certified and operates under international quality systems that guarantee a product worthy of your trust'}
+      </p>
+    </motion.div>
+
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {certifications.map((cert, index) => (
+        <motion.div
+          key={cert.id}
+          className="group relative rounded-lg overflow-hidden shadow-lg elegant-shadow bg-white/5 border border-white/10 hover:border-gold/50 transition-colors duration-500"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: index * 0.15 }}
+        >
+          <div className="h-72 overflow-hidden relative">
+            <LazyImage
+              src={cert.image}
+              alt={isRTL ? cert.titleAR : cert.titleEN}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/30 to-transparent" />
+
+            {/* Gold badge */}
+            <div className="absolute top-4 right-4 bg-gold/90 backdrop-blur-sm rounded-full p-2 shadow-lg">
+              <Award className="w-5 h-5 text-white" />
             </div>
           </div>
-        </section>
 
-        {/* ============ MANUFACTURING PROCESS ============ */}
-        <section className="py-20 bg-gray-50">
-          <div className="container-custom mx-auto">
-            <motion.div
-              className="text-center max-w-2xl mx-auto mb-16"
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true }}
-              variants={fadeUp}
-            >
-              <h2 className="text-3xl font-bold text-charcoal mb-4">
-                {isRTL ? 'مراحل التصنيع' : 'Our Manufacturing Process'}
-              </h2>
-              <p className="text-gray-600">
-                {isRTL
-                  ? 'كل قطعة تمر بمراحل دقيقة لضمان أعلى مستوى من الجودة والإتقان'
-                  : 'Every piece goes through precise stages to ensure the highest level of quality and craftsmanship'}
-              </p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {processSteps.map((step, index) => {
-                const Icon = step.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white rounded-lg p-6 shadow-lg elegant-shadow text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className="w-16 h-16 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-4">
-                      <Icon className="w-8 h-8 text-gold" />
-                    </div>
-                    <div className="text-gold font-bold mb-2">
-                      {String(index + 1).padStart(2, '0')}
-                    </div>
-                    <h3 className="text-xl font-bold text-charcoal mb-2">
-                      {isRTL ? step.titleAR : step.titleEN}
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      {isRTL ? step.descAR : step.descEN}
-                    </p>
-                  </motion.div>
-                );
-              })}
-            </div>
+          <div className={`p-6 ${isRTL ? 'text-right' : 'text-left'}`}>
+            <h3 className="text-lg font-bold mb-1">
+              {isRTL ? cert.titleAR : cert.titleEN}
+            </h3>
+            <p className="text-gray-400 text-sm">
+              {isRTL ? cert.descAR : cert.descEN}
+            </p>
           </div>
-        </section>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
         {/* ============ INSIDE THE FACTORY ============ */}
         <section className="py-20">
@@ -508,7 +479,7 @@ const Gallery = () => {
               {workshopImages.map((image, index) => (
                 <motion.div
                   key={image.id}
-                  className="relative h-56 rounded-lg overflow-hidden shadow-lg elegant-shadow group"
+                  className="relative h-72 rounded-lg overflow-hidden shadow-lg elegant-shadow group"
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}

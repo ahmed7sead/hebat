@@ -3,6 +3,7 @@ import HeroSection from '../components/home-index/HeroSection';
 import FeaturedCollection from '../components/home-index/FeaturedCollection';
 import PartnersSection from '../components/home-index/PartnersSection';
 import AboutSection from '../components/home-index/AboutSection';
+import TeamSection from '../components/home-index/TeamSection';
 import ProjectSection from '../components/home-index/ProjectSection.tsx';
 import CtaSection from '../components/home-index/CtaSection';
 import ScrollObserver from '../components/home-index/ScrollObserver';
@@ -54,6 +55,9 @@ const Index = () => {
           <ScrollObserver animation="fade-up" delay={50}>
             <AboutSection />
           </ScrollObserver>
+          <ScrollObserver animation="fade-up" staggerChildren>
+  <TeamSection />
+</ScrollObserver>
 
 
           <ScrollObserver animation="fade-up" staggerChildren>

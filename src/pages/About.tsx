@@ -62,7 +62,7 @@ const About = () => {
 },
 
 {
-  name: isRTL ? 'أحمد عبدالواحد' : 'Ahmed Abdelwahab',
+  name: isRTL ? 'أحمد عبدالواحد' : 'Ahmed Abdulwahid',
   role: isRTL
     ? 'مطور أعمال'
     : 'Business Development',
@@ -271,55 +271,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Mission & Vision with ScrollObserver */}
-      <section className="py-20 bg-gray-50">
-        <div className="container-custom mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Mission */}
-            <ScrollObserver animation="fade-up" threshold={0.1} delay={100}>
-              <Card className={`h-full shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${isRTL ? 'text-right' : 'text-left'}`}>
-                <CardContent className="p-8">
-                  <div className="bg-gold text-white w-14 h-14 flex items-center justify-center rounded-full mb-6 transform transition-transform duration-500 hover:scale-110">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M12 2L4 6V12C4 15.31 7.58 20 12 22C16.42 20 20 15.31 20 12V6L12 2Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-4">
-                    {isRTL ? 'مهمتنا' : 'Our Mission'}
-                  </h3>
-                  <p className="text-gray-600">
-                    {isRTL
-                      ? 'مهمتنا هي إضاءة المساحات بتصاميم فريدة وأنيقة تتجاوز التوقعات. نحن نهدف إلى تحويل أي مكان إلى تحفة فنية من خلال الإضاءة الاستثنائية والتفاصيل الدقيقة، مع التزامنا المطلق بالجودة والخدمة.'
-                      : 'By combining our expertise and passion for innovation, we are committed to providing advanced, tailor-made lighting solutions that enhance both residential and commercial environments and become the first choice for those with refined and luxurious taste, from hotels, mosques, villas and palaces.'}
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollObserver>
-
-            {/* Vision */}
-            <ScrollObserver animation="fade-up" threshold={0.2} delay={200}>
-              <Card className={`h-full shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${isRTL ? 'text-right' : 'text-left'}`}>
-                <CardContent className="p-8">
-                  <div className="bg-gold text-white w-14 h-14 flex items-center justify-center rounded-full mb-6 transform transition-transform duration-500 hover:scale-110">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <h3 className="text-2xl font-bold text-charcoal mb-4">
-                    {isRTL ? 'رؤيتنا' : 'Our Vision'}
-                  </h3>
-                  <p className="text-gray-600">
-                    {isRTL
-                      ? 'أن نُضيء المساحات بأناقة ورقي ولمسة فنية مميزة، مُقدمين تجارب إضاءة تتجاوز المألوف. أن نحافظ على ريادتنا ونُرسخ مكانتنا كواحدة من أكبر الشركات السعودية في مجال الإضاءة والديكور..'
-                      : 'To illuminate spaces with elegance, sophistication, and a distinctive artistic touch, offering lighting experiences that transcend the ordinary. To maintain our leadership and position ourselves as one of the largest Saudi companies in the field of lighting and décor..'}
-                  </p>
-                </CardContent>
-              </Card>
-            </ScrollObserver>
-          </div>
-        </div>
-      </section>
 
       {/* Our Team with enhanced animations */}
       <section className="py-20 bg-gray-50">
@@ -340,8 +291,8 @@ const About = () => {
               <ScrollObserver
                 key={index}
                 animation="fade-up"
-                threshold={0.1}
-                delay={150 * (index + 1)}
+                threshold={0.02}
+                delay={100 * (index + 1)}
                 className="relative group"
               >
                 <Card
