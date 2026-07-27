@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { name: isRTL ? 'الرئيسية' : 'Home', path: '/', icon: Home, isSemiBold: true },
     { name: isRTL ? 'من نحن' : 'About Us', path: '/about', icon: Users },
-    { name: isRTL ? 'منتجات مصنعنا' : 'Products', path: '/gallery', icon: Image },
+    { name: isRTL ? 'المصنع' : 'Products', path: '/factory', icon: Image },
     { name: isRTL ? 'التصميم الداخلي' : 'Interior Design', path: '/testimonials', icon: MessageSquare },
     { name: isRTL ? 'أخبارنا' : 'News', path: '/News', icon: Newspaper, isSemiBold: true },
     { name: isRTL ? 'تواصل معنا' : 'Contact Us', path: '/contact', icon: Phone },
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
   const mobileNavItems = [
     { name: isRTL ? 'أخبارنا' : 'News', path: '/News', icon: Newspaper, isSemiBold: true },
     { name: isRTL ? 'التصميم الداخلي' : 'Interior Design', path: '/testimonials', icon: MessageSquare },
-    { name: isRTL ? 'منتجات مصنعنا' : 'Products', path: '/gallery', icon: Image },
+    { name: isRTL ? 'المصنع' : 'factory', path: '/gallery', icon: Image },
     { name: isRTL ? 'من نحن' : 'About Us', path: '/about', icon: Users },
     { name: isRTL ? 'تواصل معنا' : 'Contact Us', path: '/contact', icon: Phone },
   ];
