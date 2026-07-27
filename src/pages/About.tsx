@@ -50,7 +50,27 @@ const About = () => {
         : 'Over 20 years of experience in engineering design and AutoCAD drafting, with extensive expertise in reviewing technical drawings, coordinating engineering works, and ensuring design accuracy and compliance with project requirements...',
       image: "/team/5.png"
     },
+    {
+  name: isRTL ? 'مصطفى عبدالتواب' : 'Mostafa Abdel Tawab',
+  role: isRTL
+    ? 'مدير المصنع'
+    : 'Factory Manager',
+  bio: isRTL
+    ? 'مسؤول عن إدارة وتنظيم عمليات المصنع ومتابعة سير العمل والإنتاج، مع الإشراف على التنسيق بين مختلف الأقسام وضمان كفاءة التشغيل، إلى جانب دعم عمليات البيع والتنسيق مع العملاء واحتياجات المشروعات.'
+    : 'Responsible for managing and coordinating factory operations and production workflows, overseeing cross-department coordination and operational efficiency, while also supporting sales activities and coordinating with clients and project requirements.',
+  image: "/team/mostafa-abdel-tawab.png" // غيّر المسار حسب الصورة الفعلية
+},
 
+{
+  name: isRTL ? 'أحمد عبدالواحد' : 'Ahmed Abdelwahab',
+  role: isRTL
+    ? 'مطور أعمال'
+    : 'Business Development',
+  bio: isRTL
+    ? 'يساهم في تطوير أعمال الشركة من خلال توظيف التقنية والحلول الرقمية لدعم النمو وتوسيع الحضور في السوق، ويشمل ذلك تطوير وإدارة الموقع والأنظمة الرقمية الاخري ،والتسويق الإلكتروني .'
+    : 'Drives business growth through digital solutions, website and system development, online presence, and digital marketing.',
+  image: "/team/ahmed-pro.png"
+},
     {
       name: isRTL ? 'م/ إبراهيم محمد السيد' : 'Eng. Ibrahim Muhammad Al-Sayed',
       role: isRTL ? 'مهندس مبيعات' : 'Sales Engineer',
@@ -59,6 +79,7 @@ const About = () => {
         : 'Specialized in providing technical solutions to clients, analyzing project needs, and ensuring product compatibility.',
       image: "/team/Ibrahim.webp"
     },
+
     {
       name: isRTL ? 'م/ أدهم مصطفى' : 'Eng. Adham Mostafa',
       role: isRTL
@@ -77,7 +98,14 @@ const About = () => {
         : 'Experienced in managing and delivering lighting, chandeliers, and decorative lighting projects across Saudi Arabia, overseeing every project phase from planning and coordination to installation and final handover while ensuring the highest quality standards.',
       image: "/team/ms.png"
     },
-
+{
+      name: isRTL ? 'سيد حسين' : 'Sayed Hussein',
+      role: isRTL ? 'أخصائي تسويق' : 'Marketing Specialist',
+      bio: isRTL
+        ? 'يمتلك خبرة تتجاوز 15 عامًا في تسويق وبيع النجف والثريات وحلول الإضاءة، مع خبرة في بناء علاقات قوية مع العملاء، وتحليل احتياجات المشاريع، وتقديم الحلول المناسبة التي تجمع بين الجودة والقيمة.'
+        : 'With over 15 years of experience in marketing and sales of chandeliers, decorative lighting, and lighting solutions, he specializes in building strong client relationships, understanding project requirements, and delivering tailored solutions that combine quality and value.',
+      image: "/team/sh.png"
+    },
     {
       name: isRTL ? 'م/ شريف حجازي' : 'Eng / Sherif Hejazy',
       role: isRTL ? 'مهندس معماري ومتخصص تصيير ثلاثي الأبعاد' : 'Architect & 3D Visualizer',
@@ -88,25 +116,26 @@ const About = () => {
     },
 
 {
-  name: isRTL ? 'أحمد عبدالواحد' : 'Ahmed Abdelwahab',
-  role: isRTL
-    ? 'مطور أعمال'
-    : 'Business Development',
-  bio: isRTL
-    ? 'يساهم في تطوير أعمال الشركة وتعزيز حضورها الرقمي، مع مسؤولية عن إدارة وتطوير الموقع الإلكتروني وقنوات التواصل الاجتماعي والتسويق الإلكتروني، وتحسين الأدوات والمنصات الرقمية بما يدعم نمو الشركة.'
-    : 'Contributes to business development and strengthens the company’s digital presence, with responsibility for managing and developing the website, social media channels, and digital marketing activities while improving digital platforms and tools to support business growth.',
-  image: "/team/ahmed-pro.png" // غيّر المسار حسب الصورة الفعلية
-},
-
-    {
-      name: isRTL ? 'سيد حسين' : 'Sayed Hussein',
-      role: isRTL ? 'أخصائي تسويق' : 'Marketing Specialist',
+      name: isRTL ? 'م/ هانيا هشام' : 'Hania Hesham',
+      role: isRTL ? 'مهندسة معمارية ومصممة داخلية' : 'Architect & Interior Designer',
       bio: isRTL
-        ? 'يمتلك خبرة تتجاوز 15 عامًا في تسويق وبيع النجف والثريات وحلول الإضاءة، مع خبرة في بناء علاقات قوية مع العملاء، وتحليل احتياجات المشاريع، وتقديم الحلول المناسبة التي تجمع بين الجودة والقيمة.'
-        : 'With over 15 years of experience in marketing and sales of chandeliers, decorative lighting, and lighting solutions, he specializes in building strong client relationships, understanding project requirements, and delivering tailored solutions that combine quality and value.',
-      image: "/team/sh.png"
+        ? 'خبيرة في تصميم المساحات الداخلية العصرية مع لمسة فنية تناسب مختلف الأذواق.'
+        : 'Expert in modern interior space design with an artistic touch tailored to diverse styles.',
+      image: "/team/hania.jpg" // غير المسار حسب الصورة الحقيقية
     },
 
+    
+
+{
+      name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'Eng / Abdulrahman Ismail',
+      role: isRTL
+        ? 'مهندس  في تصميم الثريا - خبرة 5 سنوات'
+        : 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
+      bio: isRTL
+        ? 'متخصص في تصميم الثريات مع خبرة تمتد إلى 5 سنوات في إعداد الرسومات التنفيذية والتفصيلية بدقة عالية وتحويل الأفكار إلى تصاميم احترافية قابلة للتنفيذ.'
+        : 'Specialized in chandelier design using AutoCAD, with 5 years of experience creating detailed technical drawings, production-ready designs, and precise drafting solutions.',
+      image: "/team/abd.png" // غيّر المسار حسب الصورة الفعلية
+    },
 
 
     {
@@ -118,26 +147,9 @@ const About = () => {
       image: "/team/mah.png"
     },
     
-    {
-      name: isRTL ? 'م/ هانيا هشام' : 'Hania Hesham',
-      role: isRTL ? 'مهندسة معمارية ومصممة داخلية' : 'Architect & Interior Designer',
-      bio: isRTL
-        ? 'خبيرة في تصميم المساحات الداخلية العصرية مع لمسة فنية تناسب مختلف الأذواق.'
-        : 'Expert in modern interior space design with an artistic touch tailored to diverse styles.',
-      image: "/team/hania.jpg" // غير المسار حسب الصورة الحقيقية
-    },
+    
 
-    {
-      name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'Eng / Abdulrahman Ismail',
-      role: isRTL
-        ? 'مهندس  في تصميم الثريا - خبرة 5 سنوات'
-        : 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
-      bio: isRTL
-        ? 'متخصص في تصميم الثريات مع خبرة تمتد إلى 5 سنوات في إعداد الرسومات التنفيذية والتفصيلية بدقة عالية وتحويل الأفكار إلى تصاميم احترافية قابلة للتنفيذ.'
-        : 'Specialized in chandelier design using AutoCAD, with 5 years of experience creating detailed technical drawings, production-ready designs, and precise drafting solutions.',
-      image: "/team/abd.png" // غيّر المسار حسب الصورة الفعلية
-    },
-
+    
 {
   name: isRTL ? 'مصطفى محمد' : 'Mostafa Mohamed',
   role: isRTL
