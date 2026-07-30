@@ -171,7 +171,16 @@ const About = () => {
     : 'Human Resources Manager responsible for managing and developing human resources, supporting a positive work environment, and overseeing recruitment and employee development in alignment with the company’s goals.',
   image: "/team/sara.png" // غيّر المسار حسب الصورة الفعلية
 },
-
+{
+  name: isRTL ? 'إسلام محمد' : 'Islam Mohamed',
+  role: isRTL
+    ? 'مصمم هندسي'
+    : 'Engineering Designer',
+  bio: isRTL
+    ? 'مصمم هندسي بخبرة 3 سنوات في تصميم الثريات وحلول الإضاءة، يجيد العمل على برامج التصميم والنمذجة الهندسية لإعداد التصاميم والرسومات الفنية القابلة للتنفيذ بدقة واحترافية.'
+    : 'Engineering Designer with 3 years of experience in chandelier and architectural lighting design, creating accurate, production-ready designs and technical drawings using industry-standard design and 3D modeling software.',
+  image: "/team/ISA.png" // غيّر المسار حسب الصورة الفعلية
+},
 
   ];
 
