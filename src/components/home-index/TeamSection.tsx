@@ -55,6 +55,13 @@ const teamMembers = [
     roleEn: 'Lighting, Chandeliers & Decorative Fixtures Installation Project Engineer',
     image: '/team/ad.png',
   },
+{
+    nameAr: 'م/ عبدالرحمن إسماعيل',
+    nameEn: 'Eng / Abdulrahman Ismail',
+    roleAr: 'مهندس في تصميم المعان والثرايا - خبرة 5 سنوات',
+    roleEn: 'Senior Metalwork Designer - 5 Years of Experience',
+    image: '/team/abd.png',
+  },
   {
     nameAr: 'م/ محمد مصطفى',
     nameEn: 'Eng. Mohamed Mostafa',
@@ -83,13 +90,7 @@ const teamMembers = [
     roleEn: 'Architect & Interior Designer',
     image: '/team/hania.jpg',
   },
-  {
-    nameAr: 'م/ عبدالرحمن إسماعيل',
-    nameEn: 'Eng / Abdulrahman Ismail',
-    roleAr: 'مهندس في تصميم الثريا - خبرة 5 سنوات',
-    roleEn: 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
-    image: '/team/abd.png',
-  },
+  
   {
     nameAr: 'م/ مهاب إسماعيل',
     nameEn: 'Eng. Mohab Ismail',
