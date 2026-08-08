@@ -127,10 +127,10 @@ const About = () => {
     
 
 {
-      name: isRTL ? 'م/ عبدالرحمن إسماعيل' : 'Eng / Abdulrahman Ismail',
+      name: isRTL ? 'م/عبدالرحمن اسماعيل' : 'Eng / Abdulrahman Ismail',
       role: isRTL
-        ? 'مهندس  في تصميم الثريا - خبرة 5 سنوات'
-        : 'AutoCAD Chandelier Design Engineer - 5 Years of Experience',
+        ? ' مهندس تصميمات معادن - خبرة 5 '
+        : 'Senior Metalwork Designer - 5 Years of Experience',
       bio: isRTL
         ? 'متخصص في تصميم الثريات مع خبرة تمتد إلى 5 سنوات في إعداد الرسومات التنفيذية والتفصيلية بدقة عالية وتحويل الأفكار إلى تصاميم احترافية قابلة للتنفيذ.'
         : 'Specialized in chandelier design using AutoCAD, with 5 years of experience creating detailed technical drawings, production-ready designs, and precise drafting solutions.',
