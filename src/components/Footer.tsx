@@ -73,23 +73,13 @@ const Footer: React.FC = () => {
                 {isRTL ? 'شارع الملك فيصل، جدة، السعودية' : 'King Faisal St, Jeddah, Saudi Arabia'}
               </span>
             </div>
-                      <div className="flex items-start gap-3 text-base text-white">
-            <MapPin size={18} className="text-gold mt-1 shrink-0" />
-            <span>
-              {isRTL
-                ? 'المصنع: القاهرة، بدر، المنطقة الصناعية الأولى، قطعة 155'
-                : 'Factory: Cairo, Badr, First Industrial Zone, Plot 155'}
-            </span>
-          </div>
+
 
             <div className="flex items-start gap-3">
               <Phone size={18} className="text-gold" />
               <span>00966580076800</span>
             </div>
-                        <div className="flex items-start gap-3">
-              <Phone size={18} className="text-gold" />
-              <span>01559893354</span>
-            </div>
+
 
             <div className="flex items-start gap-3">
               <Mail size={18} className="text-gold" />
